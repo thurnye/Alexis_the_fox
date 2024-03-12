@@ -1,9 +1,6 @@
-import * as React from 'react';
-// import {
-//   Link
-// } from "react-router-dom";
+import React, {useEffect} from 'react';
+import {useLocation} from 'react-router-dom';
 import Link from '@mui/material/Link';
-
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,11 +9,7 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 
 const colorAlexis = "#8F8A7A";
 
@@ -31,24 +24,23 @@ const pages = [
   { label: 'Contact', path: 'contact' }
 ];
 
-function Navbar() {
+function Navbar({activeLink, setActiveLink}) {
+  const location = useLocation();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  useEffect(() => {
+    setActiveLink(location.pathname.length > 1 ? location.pathname.replace(/^\/+/, '') : '/')
+  },[location.pathname])
+  
 
   return (
     <AppBar position="static" sx={{background:"none", boxShadow:"none"}}>
@@ -104,13 +96,17 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.label} onClick={handleCloseNavMenu}>
-                  {/* <Typography textAlign="center">
-                    <Link to={page.link}>
-                      {page.label}
-                    </Link>
-                  </Typography> */
-                  }
-                    <Link href={page.path} underline="none" sx={{color:colorAlexis, cursor:"pointer"}}>
+                  <Link 
+                  href={page.path} 
+                  underline="none" 
+                  sx={{
+                    color: activeLink === page.path ? '#564e37' : colorAlexis, 
+                    cursor:"pointer",
+                    "&:hover":{
+                      color: '#564e37'
+                    }
+                  }}
+                  >
               {page.label}
             </Link>
                 </MenuItem>
@@ -120,7 +116,6 @@ function Navbar() {
 
 
           {/* for desktops screens */}
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
@@ -141,14 +136,19 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, justifyContent:"center", alignItems:"flex-start" , textAlign:"center" , display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              // <Button
-              //   key={page}
-              //   onClick={handleCloseNavMenu}
-              //   sx={{ my: 2, color: 'white', display: 'block' }}
-              // >
-              //   {page}
-              // </Button>
-              <Link href={page.path} underline="none" sx={{color:colorAlexis, mx:3, cursor:"pointer"}}>
+              <Link 
+              href={page.path} 
+              underline="none" 
+              sx={{
+                color: activeLink === page.path ? '#564e37' : colorAlexis, 
+                mx:3, 
+                cursor:"pointer",
+                "&:hover":{
+                  color: '#564e37'
+                }
+
+              }}
+              >
               {page.label}
             </Link>
             ))}

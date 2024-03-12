@@ -110,7 +110,7 @@ function Navbar() {
                     </Link>
                   </Typography> */
                   }
-                    <Link href={page.link} underline="none" sx={{color:colorAlexis, cursor:"pointer"}}>
+                    <Link href={page.path} underline="none" sx={{color:colorAlexis, cursor:"pointer"}}>
               {page.label}
             </Link>
                 </MenuItem>
@@ -148,7 +148,7 @@ function Navbar() {
               // >
               //   {page}
               // </Button>
-              <Link href={page.link} underline="none" sx={{color:colorAlexis, mx:3, cursor:"pointer"}}>
+              <Link href={page.path} underline="none" sx={{color:colorAlexis, mx:3, cursor:"pointer"}}>
               {page.label}
             </Link>
             ))}

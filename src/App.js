@@ -24,6 +24,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Navbar activeLink={activeLink} setActiveLink={setActiveLink}/>
+      
        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="meet-me" element={<About />} />

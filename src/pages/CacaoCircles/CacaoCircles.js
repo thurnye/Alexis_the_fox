@@ -4,19 +4,18 @@ import Box from '@mui/material/Box';
 import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
-import Container from '@mui/material/Container';
+import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
+import FoxyButton from '../../components/FoxyButton/FoxyButton';
+
 
 const CacaoCircles = () => (
   <div className={styles.CacaoCircles}>
     <CssBaseline />
     {/* <Container maxWidth="xl"> */}
     <Box sx={{background: '#312813', color: 'white', py: 5, px: 3}}>
-      <Box sx={{mb: 4, width: '100%',textAlign: 'center'}}>
-          <Typography component="div" variant="h5" sx={{mt: 3, mb: 1}}>Cacoa Healer</Typography>
-        </Box>
+        <HeaderTitle title={'Cacoa Healer'}/>
       <Box sx={{ flexGrow: 1, mt: 4, display: {xs: 'none', md: 'block'}}}>
         <Grid 
         container 
@@ -97,9 +96,7 @@ const CacaoCircles = () => (
 
     {/* The Cocoa Circle */}
     <Box sx={{px: 3}}>
-      <Box sx={{mb: 4, width: '100%',textAlign: 'center'}}>
-          <Typography component="div" variant="h5" sx={{mt: 3, mb: 1}}>The Cocoa Circle</Typography>
-        </Box>
+      <HeaderTitle title={'The Cacoa Circle'}/>
       <Box sx={{ flexGrow: 1, mt: 4, }}>
         <Grid 
         container 
@@ -134,9 +131,7 @@ const CacaoCircles = () => (
 
     {/* What is in the cocoa brew*/}
     <Box sx={{background: '#975A35', color: 'white', p: 3}}>
-      <Box sx={{mb: 4, width: '100%',textAlign: 'center'}}>
-          <Typography component="div" variant="h5" sx={{mt: 3, mb: 1}}>What is in the cocoa brew?</Typography>
-        </Box>
+    <HeaderTitle title={'What is in the cocoa brew?'}/>
       <Box sx={{ flexGrow: 1, mt: 4, }}>
         <Grid 
         container 
@@ -169,8 +164,31 @@ const CacaoCircles = () => (
       </Box>
     </Box>
 
-    
-    {/* </Container> */}
+    <Box sx={{height: '50vh'}}>
+      <Box sx={{position: 'relative', background: '#1c310a', color: 'white'}}>
+        <Box sx={{textAlign: 'center', height: 100, display:'flex', justifyContent: 'center', alignItems: 'center'}}>
+          <Typography component="div" variant="" sx={{fontWeight: 700}}>ELEVATE YOUR NEXT EVENT OR RETREAT AND INCLUDE A CACAO CIRCLE</Typography>
+        </Box>
+        <Box sx={{ position: 'absolute', bottom: -17, left: '50%', transform: 'translateX(-50%)', zIndex: 9999,}}>
+            <FoxyButton
+              fullWidth={false}
+              variant="contained" 
+              label={"BOOK CACO CIRCLE"} 
+              backgroundColor={'#c8bea9'}
+              hoverBackgroundColor={'#c8bea9'}
+              height={'initial'}
+              width={'initial'}
+              sx={{
+                borderRadius: 5,
+                fontSize:{xs: 12, md: 15},
+                color: 'white',
+                fontWeight: 700,
+                boxShadow: '-7px -11px 20px 20px rgb(201 200 22 / 20%), inset 0px 0px 20px 0px rgb(255 244 204), 0px 1px 5px 0px rgb(226 214 180)'
+              }}
+            />
+        </Box>
+      </Box>
+    </Box>
   </div>
 );
 

@@ -28,21 +28,21 @@ const Brands = ({ speed = 25000 }) => {
           <section style={{ "--speed": `${speed}ms` }}>
             {images.map(({ id, image }) => (
               <div className={styles.image} key={id}>
-                <img src={image} alt={id} />
+                <img src={image} alt={id} className={styles.brandImage}/>
               </div>
             ))}
           </section>
           <section style={{ "--speed": `${speed}ms` }}>
             {images.map(({ id, image }) => (
               <div className={styles.image} key={id}>
-                <img src={image} alt={id} />
+                <img src={image} alt={id} className={styles.brandImage}/>
               </div>
             ))}
           </section>
           <section style={{ "--speed": `${speed}ms` }}>
             {images.map(({ id, image }) => (
               <div className={styles.image} key={id}>
-                <img src={image} alt={id} />
+                <img src={image} alt={id} className={styles.brandImage}/>
               </div>
             ))}
           </section>

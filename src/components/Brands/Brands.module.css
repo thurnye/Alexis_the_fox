@@ -1,12 +1,12 @@
 .Brands {
-    img {
+  .brandImage {
       max-width: 150px;
       /* height: 5rem; */
       padding: 0 15px;
       object-fit: cover;
     }
     
-    img:last-of-type {
+    .brandImage:last-of-type {
       padding-left: 0;
     }
     

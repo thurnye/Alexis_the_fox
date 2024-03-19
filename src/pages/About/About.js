@@ -8,6 +8,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
+import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
 
 const services = {
   withDesc : [
@@ -50,9 +51,9 @@ const About = () => {
       >
           <Grid item xs={12} sm={6} md={9} sx={{}}>
             <Box sx={{height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-              <Typography component="div" variant="h5" sx={{mt: 3}}>Meet Alexis</Typography>
+              <HeaderTitle title={'Meet Alexis'}/>
               <Box sx={{textAlign: 'center'}}>
-                <Typography component="div" variant="body2" gutterBottom sx={{my: 3, px: 3}}>
+                <Typography component="div" variant="body2" gutterBottom sx={{mb: 3, px: 3}}>
                   My name is Alexis Ramirez Jackson and I'm a fox of all trades. I'm a Latina, born and raised from New York City. I'm a feminine embodiment movement and cacao facilitator that specializes in trauma, content creator with over 5 million followers, mentor, mother, speaker, writer, creator, dancer, mental health advocate, and fashion designer. Like I said a fox of all trades lol.
                 </Typography>
                 <Typography component="div" variant="body2" gutterBottom sx={{my: 3, px: 3}}>
@@ -86,7 +87,8 @@ const About = () => {
         />
       </Box>
       <Box>
-      <Typography component="div" variant="h5" sx={{mt: 3, mb: 1}}>Meet Alexis</Typography>
+      {/* <Typography component="div" variant="h5" sx={{mt: 3, mb: 1}}>Meet Alexis</Typography> */}
+      <HeaderTitle title={'Meet Alexis'}/>
 
       <Typography component="div" variant="body2" gutterBottom sx={{mb: 3,}}>
         My name is Alexis Ramirez Jackson and I'm a fox of all trades. I'm a Latina, born and raised from New York City. I'm a feminine embodiment movement and cacao facilitator that specializes in trauma, content creator with over 5 million followers, mentor, mother, speaker, writer, creator, dancer, mental health advocate, and fashion designer. Like I said a fox of all trades lol.
@@ -100,8 +102,15 @@ const About = () => {
     </Container>
 
     <Box sx={{ flexGrow: 1, position: 'relative', background: '#955B35'}}>
-      <Box sx={{ width: 250, position: 'absolute', top: -15, left: '50%', transform: 'translateX(-50%)', zIndex: 9999, background: 'white', p: 0.4,}}>
-        <Typography component="div" variant="h5" sx={{px: 2, border: '2px solid #D7D3CA',}}>Work with Alexis</Typography>
+      <Box sx={{ width: 270, position: 'absolute', top: -15, left: '50%', transform: 'translateX(-50%)', zIndex: 9999, background: 'white', p: 0.4,}}>
+        <Typography component="div" variant="h4" sx={{
+          // px: 2, 
+          border: '2px solid #D7D3CA', 
+          fontFamily: "Indie Flower, cursive",
+          fontWeight: 400,
+          fontStyle: 'normal',
+          textAlign: 'center'
+        }}>Work with Alexis</Typography>
       </Box>
       <Box sx={{flexGrow: 1, py: 3, px: 3}}>
         <Grid container spacing={{ xs: 2, md: 1 }} columns={{ xs: 4, sm: 12, md: 12 }}>
@@ -116,7 +125,9 @@ const About = () => {
                         sx={{ 
                           width: {xs: 'initial', md: 170},
                           textAlign: 'center',
-                          fontSize: {xs: '1rem', sm:'1.5rem'}
+                          fontSize: {xs: '1rem', sm:'1.5rem'},
+                          fontFamily:'monospace', fontWeight: 700,
+                          color:'#cfcfcf' 
                         }}
                           >
                             {el.primary.toUpperCase()}
@@ -125,7 +136,9 @@ const About = () => {
                         sx={{ 
                           textAlign: 'center', 
                           mt: 2,
-                          fontSize: {xs: '0.8rem', sm:'1.2rem'}
+                          fontSize: {xs: '0.8rem', sm:'1.2rem'},
+                          fontFamily:'monospace', fontWeight: 700,
+                          color:'#cfcfcf'  
                           }}
                           >
                           {el.secondary}
@@ -137,7 +150,7 @@ const About = () => {
                 )}
                 <Grid item xs={12} sm={12}>
                   <Box sx={{width: 'inherit'}}>
-                    <Typography variant="caption" component="div" sx={{color: 'white', }}>
+                    <Typography variant="caption" component="div" sx={{color: 'white', fontFamily:'monospace', fontWeight: 700 }}>
                       EXPLORE INDIVIDUAL OR GROUP SESSIONS WITH ALEXIS FROM CACAO CIRCLES TO SENSUAL MOVEMENT CLASSES. EACH SESSION IS DESIGNED WITH YOUR HIGHEST INTENIONS AT THE CENTER.
                     </Typography>
                   </Box>
@@ -159,7 +172,9 @@ const About = () => {
                      sx={{
                       width: {xs: 120, md: 170}, 
                       textAlign: 'center',
-                      fontSize: {xs: '1rem', sm:'1.5rem'}
+                      fontSize: {xs: '1rem', sm:'1.5rem'},
+                      fontFamily:'monospace', fontWeight: 700,
+                      color:'#cfcfcf'  
                       }}
                       >
                         {el.primary.toUpperCase()}
@@ -169,7 +184,9 @@ const About = () => {
                       width: 170, 
                       textAlign: 'center',
                       mt: 2,
-                      fontSize: {xs: '0.8rem', sm:'1.2rem'}
+                      fontSize: {xs: '0.8rem', sm:'1.2rem'},
+                      fontFamily:'monospace', fontWeight: 700 ,
+                      color:'#cfcfcf' 
                       }}>{el.secondary}</Typography>}
                    </CardContent>
                  </Card>
@@ -178,7 +195,7 @@ const About = () => {
                 {services.withoutDesc.map((el, index) => 
                    <Grid item xs={2} sm={6}>
                    <Box sx={{width: 'inherit',}}>
-                     <Typography variant="caption" component="div" sx={{color: 'white', }}>{el.description.toUpperCase()}</Typography>
+                     <Typography variant="caption" component="div" sx={{color: 'white', fontFamily:'monospace', fontWeight: 700 }}>{el.description.toUpperCase()}</Typography>
                    </Box>
                  </Grid>
                 )}

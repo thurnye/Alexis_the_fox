@@ -107,7 +107,7 @@ function Navbar({activeLink, setActiveLink}) {
                     }
                   }}
                   >
-              {page.label}
+              {page.label.toUpperCase()}
             </Link>
                 </MenuItem>
               ))}
@@ -149,7 +149,7 @@ function Navbar({activeLink, setActiveLink}) {
 
               }}
               >
-              {page.label}
+              {page.label.toUpperCase()}
             </Link>
             ))}
           </Box>

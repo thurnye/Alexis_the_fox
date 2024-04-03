@@ -8,7 +8,9 @@ import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
-import FoxyButton from '../../components/FoxyButton/FoxyButton'
+import FoxyButton from '../../components/FoxyButton/FoxyButton';
+import CardMedia from '@mui/material/CardMedia';
+
 
 
 const services = ['Sensual Dance', 'Caco Circles', 'Retreats', 'Partnerships', 'Speaking', 'Engagements'];
@@ -134,20 +136,20 @@ const Contact = () => {
           </Box>
           <Box sx={{textAlign: 'center'}}>
             <FoxyButton
-                fullWidth={false}
-                variant="contained" 
-                label={"Submit"} 
-                backgroundColor={'#312813'}
-                hoverBackgroundColor={'#312813'}
-                height={'initial'}
-                sx={{
-                  width: 250,
-                  borderRadius: 5,
-                  fontSize: 20,
-                  color: 'white',
-                  fontWeight: 700,
-                }}
-              />
+              fullWidth={false}
+              variant="contained" 
+              label={"Submit"} 
+              backgroundColor={'#312813'}
+              hoverBackgroundColor={'#312813'}
+              height={'initial'}
+              sx={{
+                width: 250,
+                borderRadius: 5,
+                fontSize: 20,
+                color: 'white',
+                fontWeight: 700,
+              }}
+            />
           </Box>
         </Box>
       </Box>

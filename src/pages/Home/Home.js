@@ -64,6 +64,7 @@ const Home = () => {
             </Box>
           </Box>
         </Box>
+        
         {/* Small devices */}
         <Box sx={{textAlign: 'center', display: {xs:'block', md: 'none'}}}>
           <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15}, display: {xs: 'block', sm: 'none'}, color:'#94998a'}}>

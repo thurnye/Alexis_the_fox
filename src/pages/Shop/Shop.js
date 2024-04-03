@@ -15,95 +15,72 @@ import Link from '@mui/material/Link';
 
 const Shop = () => (
   <div className={styles.Shop}>
-          <Container maxWidth="xl">
-          <Box sx={{height:'70vh',  display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-           <Typography variant="h3" gutterBottom>
-        Coming Soon...
-      </Typography>
-           </Box>
-    <Box sx={{ flexGrow: 1, mt:12 }}>
-      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-     
+    <Container maxWidth="lg">
+      <Box sx={{height:'70vh',  display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <Typography variant="h3" gutterBottom>
+    Coming Soon...
+  </Typography>
+      </Box>
+      <Box sx={{ flexGrow: 1, mt:12 }}>
+        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
           <Grid item xs={12} md={6}>
-            <Box>
-            <CardMedia
+            <Box sx={{display:'flex', alignItems:"center", justifyContent:"center"}}>
+              <CardMedia
                 component="img"
                 sx={{ 
-                  // width: {xs: 200, sm: 300},
-                  // height: {xs: 200, sm: 300},
-                  
-                  borderRadius: '0%' }}
+                  width: {xs: '100%', sm: 300},
+                }}
                 image={shopImage1}
                 alt="FoxyDesk"
               />
             </Box>
-         
-          </Grid>
-           <Grid item xs={12} md={6} >
-    <Box sx={{textAlign:'center', my:{xs:3, lg:'initial'}}}>
-      <Typography>
-        WELCOME TO MY VLOG JOURNAL. HERE I WILL SHARE PARTS OF MY LIFE, FROM MY DAILY ROUTINES TO MY INNER THOUGHTS. 
-      </Typography>
-      <Link href="https://www.youtube.com/channel/UCAABQ1cbiVoPHxE-vHk_KKA">
-      <CardMedia
-              component="img"
-                sx={{ my:3,
-                  // width: {xs: 200, sm: 300},
-                  // height: {xs: 200, sm: 300},
-                  
-                  borderRadius: '0%' }}
-                image={shopImage3}
-                alt="FoxyYouTube"
-              />
-              </Link>
-    </Box>
         
+          </Grid>
+          <Grid item xs={12} md={6} >
+            <Box sx={{textAlign:'center', my:{xs:3, lg:'initial'}}}>
+              <Typography>
+                WELCOME TO MY VLOG JOURNAL. HERE I WILL SHARE PARTS OF MY LIFE, FROM MY DAILY ROUTINES TO MY INNER THOUGHTS. 
+              </Typography>
+              <Link href="https://www.youtube.com/channel/UCAABQ1cbiVoPHxE-vHk_KKA">
+                <CardMedia
+                  component="img"
+                    sx={{ my:3,
+                      width: 300
+                    }}
+                    image={shopImage3}
+                    alt="FoxyYouTube"
+                  />
+              </Link>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
 
-           </Grid>
-
-      </Grid>
-    </Box>
-
-
-    <Box sx={{ flexGrow: 1, mt:12 }}>
-      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-     
+      <Box sx={{ flexGrow: 1, mt:12 }}>
+        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>      
           <Grid item xs={12} md={6} sx={{display:'flex', alignItems:"center", justifyContent:"center"}}>
             <Box sx={{display:'flex', alignItems:"center", justifyContent:"center"}}>
             <CardMedia
                 component="img"
                 sx={{ 
-                  width: {xs: 200, sm: 300},
-                  // height: {xs: 200, sm: 300},
-                  
-                  borderRadius: '0%' }}
+                  width: {xs: 200, sm: 300},}}
                 image={shopImage4}
                 alt="ComingSoon"
               />
             </Box>
-         
           </Grid>
-           <Grid item xs={12} md={6} >
-    <Box sx={{textAlign:'center', my:{xs:3, lg:'initial'}}}>
-    
-      <CardMedia
-              component="img"
-                sx={{ my:3,
-                  // width: {xs: 200, sm: 300},
-                  // height: {xs: 200, sm: 300},
-                  
-                  borderRadius: '0%' }}
+          <Grid item xs={12} md={6} >
+            <Box sx={{textAlign:'center', my:{xs:3, lg:'initial'}}}>
+              <CardMedia
+                component="img"
+                sx={{ width: {xs: '100%', sm: 300}}}
                 image={shopImage2}
                 alt="FoxyOnAir"
               />
-             
-    </Box>
-        
-
-           </Grid>
-
-      </Grid>
-    </Box>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
     </Container>
   </div>
 );

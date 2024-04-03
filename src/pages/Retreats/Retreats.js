@@ -6,8 +6,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import girlsTrip from '../../assets/photosAlexis2/retreat_girls_trips.JPG';
-import healing from '../../assets/photosAlexis2/retreat_healing.JPG';
+import girlsTrip from '../../assets/photosAlexis2/retreat_girls_trips.jpg';
+import healing from '../../assets/photosAlexis2/retreat_healing.jpg';
 import outing from '../../assets/photosAlexis2/retreat_outing.jpeg';
 import Grid from '@mui/material/Grid';
 import Retreat1 from '../../assets/photosAlexis1/Healing_Retreat.png'

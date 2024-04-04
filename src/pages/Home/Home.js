@@ -7,7 +7,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import FoxyButton from '../../components/FoxyButton/FoxyButton';
 import CardContent from '@mui/material/CardContent';
 import Brands from '../../components/Brands/Brands'
-import portrait from '../../assets/photosAlexis2/foxy.jpg'
+import foxy from '../../assets/photosAlexis2/foxy.jpg'
 
 const Home = () => {
   return(
@@ -31,7 +31,7 @@ const Home = () => {
                   height: {xs: 200, sm: 300},
                   
                   borderRadius: '50%' }}
-                image={portrait}
+                image={foxy}
                 alt="Foxy"
               />
           </Box>

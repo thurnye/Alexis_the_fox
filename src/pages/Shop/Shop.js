@@ -10,18 +10,61 @@ import shopImage1 from '../../assets/foxxyIMGSHOP/podcastIMG.png';
 import shopImage2 from '../../assets/foxxyIMGSHOP/podcastIMG2.png';
 import shopImage3 from '../../assets/foxxyIMGSHOP/YOUTUBEfox.png';
 import shopImage4 from '../../assets/foxxyIMGSHOP/comingSoon.png';
+import shopImage5 from '../../assets/photosAlexis2/image_6483441 (7).jpg';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
 const Shop = () => (
   <div className={styles.Shop}>
     <Container maxWidth="lg">
-      <Box sx={{height:'70vh',  display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+      {/* <Box sx={{height:'70vh',  display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <Typography variant="h3" gutterBottom>
+        <CardMedia
+                component="img"
+                sx={{ 
+                  width: {xs: '100%', sm: 300},
+                }}
+                image={shopImage5}
+                alt="foxappeal"
+              />
     Coming Soon...
   </Typography>
-      </Box>
-      <Box sx={{ flexGrow: 1, mt:12 }}>
+      </Box> */}
+      <CardMedia>
+  <Box sx={{ position: 'relative' }}>
+    <CardMedia
+      component="img"
+      height="800"
+      image={shopImage5}
+    />
+    <Box
+      sx={{
+        position: 'absolute',
+        bottom: 100,
+        // left: 100,
+        // center:100,
+        textAlign:'center',
+        width: '100%',
+        bgcolor: 'rgba(0, 0, 0, 0.54)',
+        color: 'white',
+        padding: '0px',
+      }}
+    >
+      <Typography variant="h5">Coming Soon...</Typography>
+      <Typography variant="body2">Summer 2024</Typography>
+    </Box>
+  </Box>
+ 
+</CardMedia>
+
+
+
+
+
+
+
+
+      {/* <Box sx={{ flexGrow: 1, mt:12 }}>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
           <Grid item xs={12} md={6}>
             <Box sx={{display:'flex', alignItems:"center", justifyContent:"center"}}>
@@ -54,9 +97,9 @@ const Shop = () => (
             </Box>
           </Grid>
         </Grid>
-      </Box>
+      </Box> */}
 
-      <Box sx={{ flexGrow: 1, mt:12 }}>
+      {/* <Box sx={{ flexGrow: 1, mt:12 }}>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>      
           <Grid item xs={12} md={6} sx={{display:'flex', alignItems:"center", justifyContent:"center"}}>
             <Box sx={{display:'flex', alignItems:"center", justifyContent:"center"}}>
@@ -80,7 +123,7 @@ const Shop = () => (
             </Box>
           </Grid>
         </Grid>
-      </Box>
+      </Box> */}
     </Container>
   </div>
 );

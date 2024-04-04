@@ -9,6 +9,7 @@ import CardMedia from '@mui/material/CardMedia';
 import girlsTrip from '../../assets/photosAlexis2/retreat_girls_trips.jpg';
 import healing from '../../assets/photosAlexis2/retreat_healing.jpg';
 import outing from '../../assets/photosAlexis2/retreat_outing.jpeg';
+import foxie from '../../assets/photosAlexis2/foxie1.png';
 import Grid from '@mui/material/Grid';
 import Retreat1 from '../../assets/photosAlexis1/Healing_Retreat.png'
 import Retreat2 from '../../assets/photosAlexis1/thailand1.png'
@@ -54,21 +55,38 @@ const Retreats = () => {
     <CssBaseline />
       <Container maxWidth="xl">
         <Box sx={{ position: 'relative'  }}>
-          <Box sx={{height: {xs:'17vh', md: '25vh'}, bgcolor: '#cfe8fc'}}>
-            <Box></Box>
-            <Box>
-              <Typography variant="h6">Foxes Unplug</Typography>
-              <Typography variant="body2">UNPLUG. RESTORE, OVERCOME, LOVE & LIVE TU VIDA</Typography>
+          <Box sx={{height: {xs:'30vh', md: '25vh'}, bgcolor: '#1e3706', position: 'relative',
+        }}>
+            <Box sx={{position: 'absolute', left: 0}}>
+              <CardMedia
+                component="img"
+                sx={{ 
+                  width: {xs: 150, md: 155},
+                  height: {xs:'29vh', md: '25vh'}
+                  // margin: 'auto'
+                  }}
+                image={foxie}
+                alt="Foxy"
+              />
+            </Box>
+            <Box sx={{ 
+              color: 'white',
+              textAlign: 'center', 
+              position: 'absolute', left: '50%', top: 4, transform: 'translateX(-50%)',
+              
+            }}>
+              <Typography variant="h3" sx={{mb: 2}}>Foxes Unplug</Typography>
+              <Typography variant="body2" sx={{color: '#955b35', fontWeight: 700}}>UNPLUG. RESTORE, OVERCOME, LOVE & LIVE TU VIDA</Typography>
             </Box>
           </Box>
-          <Box sx={{width: {xs: '70%', lg:'50%'}, position: 'absolute', left: '50%', transform: 'translateX(-50%)', background: 'white', p: 1, mt: -9}}>
+          <Box sx={{width: {xs: '70%', lg:'50%'}, position: 'absolute', left: '50%', transform: 'translateX(-50%)', background: 'white', p: 1, mt: {xs: -5, sm: -9}}}>
         <Box sx={{
           backgroundColor: '#FADD76',
           color: 'black',
           p: 3,
           height: {xs:'27vh', md: '40vh'}
         }}>
-          Video Here
+          {/* Video Here */}
         </Box>
           </Box>
         </Box>

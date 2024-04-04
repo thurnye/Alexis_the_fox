@@ -7,9 +7,9 @@ import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
 import FoxyButton from '../../components/FoxyButton/FoxyButton';
-import Cooking from '../../assets/photosAlexis1/cooking.jpeg';
-import Circle from '../../assets/photosAlexis1/flowers.jpeg';
-import CoffeeBrew from '../../assets/photosAlexis1/coffeeDrinks.jpeg';
+import cooking from '../../assets/photosAlexis1/cooking.jpeg';
+import circle from '../../assets/photosAlexis1/flowers.jpeg';
+import coffeeBrew from '../../assets/photosAlexis1/coffeeDrinks.jpeg';
 
 
 const CacaoCircles = () => (
@@ -29,9 +29,8 @@ const CacaoCircles = () => (
               <Box>
               <CardMedia
                 component="img"
-                sx={{  }}
-                image={Cooking}
-                alt="Live from space album cover"
+                image={cooking}
+                alt="cacoa healer"
               />
               </Box>
             </Grid>
@@ -70,8 +69,8 @@ const CacaoCircles = () => (
           <CardMedia
             component="img"
             sx={{ width: '100%', mx: 1 }}
-            image={Cooking}
-            alt="Live from space album cover"
+            image={cooking}
+            alt="cacoa healer"
           />
         </Box>
         <Box>
@@ -121,8 +120,8 @@ const CacaoCircles = () => (
             <CardMedia
               component="img"
               sx={{ height: 300,  }}
-              image={Circle}
-              alt="Live from space album cover"
+              image={circle}
+              alt="cacao circle"
             />
             </Box>
           </Grid> 
@@ -146,8 +145,8 @@ const CacaoCircles = () => (
             <CardMedia
               component="img"
               sx={{ height: 300,  }}
-              image={CoffeeBrew}
-              alt="Live from space album cover"
+              image={coffeeBrew}
+              alt="cacoa brew"
             />
             </Box>
           </Grid> 

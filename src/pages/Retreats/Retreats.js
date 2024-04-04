@@ -19,6 +19,7 @@ import pastRetreat from '../../assets/photosAlexis1/pastRetreat.jpg'
 import pin from '../../assets/photosAlexis1/pin.png'
 import FoxyButton from '../../components/FoxyButton/FoxyButton';
 import Pointer from '../../assets/photosAlexis1/clickPointer.png'
+import videoFoxy from '../../assets/photosAlexis1/foxUnplugged.mov'
 
 const retreatsArr = [
   {
@@ -86,7 +87,10 @@ const Retreats = () => {
           p: 3,
           height: {xs:'27vh', md: '40vh'}
         }}>
-          {/* Video Here */}
+          <video width="100%" height="100%" controls autoPlay muted loop>
+            <source src={videoFoxy} type="video/mp4"/>
+            Your browser does not support the video tag.
+          </video>
         </Box>
           </Box>
         </Box>

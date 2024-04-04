@@ -7,6 +7,9 @@ import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
 import FoxyButton from '../../components/FoxyButton/FoxyButton';
+import Cooking from '../../assets/photosAlexis1/cooking.jpeg';
+import Circle from '../../assets/photosAlexis1/flowers.jpeg';
+import CoffeeBrew from '../../assets/photosAlexis1/coffeeDrinks.jpeg';
 
 
 const CacaoCircles = () => (
@@ -27,7 +30,7 @@ const CacaoCircles = () => (
               <CardMedia
                 component="img"
                 sx={{  }}
-                image="https://i.pinimg.com/originals/9c/0e/50/9c0e5033d2e9bac33502f0a03732ae9d.jpg"
+                image={Cooking}
                 alt="Live from space album cover"
               />
               </Box>
@@ -67,7 +70,7 @@ const CacaoCircles = () => (
           <CardMedia
             component="img"
             sx={{ width: '100%', mx: 1 }}
-            image="https://i.pinimg.com/originals/9c/0e/50/9c0e5033d2e9bac33502f0a03732ae9d.jpg"
+            image={Cooking}
             alt="Live from space album cover"
           />
         </Box>
@@ -118,7 +121,7 @@ const CacaoCircles = () => (
             <CardMedia
               component="img"
               sx={{ height: 300,  }}
-              image="https://i.pinimg.com/originals/9c/0e/50/9c0e5033d2e9bac33502f0a03732ae9d.jpg"
+              image={Circle}
               alt="Live from space album cover"
             />
             </Box>
@@ -143,7 +146,7 @@ const CacaoCircles = () => (
             <CardMedia
               component="img"
               sx={{ height: 300,  }}
-              image="https://i.pinimg.com/originals/9c/0e/50/9c0e5033d2e9bac33502f0a03732ae9d.jpg"
+              image={CoffeeBrew}
               alt="Live from space album cover"
             />
             </Box>

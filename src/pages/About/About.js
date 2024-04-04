@@ -9,6 +9,7 @@ import CardContent from '@mui/material/CardContent';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
+import Foxy from '../../assets/photosAlexis1/meetFoxxy.jpg'
 
 const services = {
   withDesc : [
@@ -70,8 +71,8 @@ const About = () => {
               <CardMedia
                 component="img"
                 sx={{  }}
-                image="https://i.pinimg.com/originals/9c/0e/50/9c0e5033d2e9bac33502f0a03732ae9d.jpg"
-                alt="Live from space album cover"
+                image={Foxy}
+                alt="Foxy"
               />
               </Box>
             </Grid>
@@ -82,8 +83,8 @@ const About = () => {
           <CardMedia
             component="img"
             sx={{ width: '100%', mx: 1 }}
-            image="https://i.pinimg.com/originals/9c/0e/50/9c0e5033d2e9bac33502f0a03732ae9d.jpg"
-            alt="Live from space album cover"
+            image={Foxy}
+            alt="Foxy"
           />
         </Box>
         <Box>

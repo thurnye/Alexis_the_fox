@@ -1,6 +1,6 @@
 .Brands {
   .brandImage {
-      max-width: 150px;
+      max-width: 120px;
       /* height: 5rem; */
       padding: 0 15px;
       object-fit: cover;
@@ -14,7 +14,7 @@
       position: relative;
       width: 100%;
       overflow: hidden;
-      height: 5rem;
+      height: 7rem;
       margin-bottom: 2rem;
     }
     

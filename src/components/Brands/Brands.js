@@ -13,17 +13,13 @@ import pantene from '../../assets/LogoPartnersBRANDS/Pantene.png';
 import summers from '../../assets/LogoPartnersBRANDS/summers.jpg';
 import tula from '../../assets/LogoPartnersBRANDS/Tula.png';
 import walmart from '../../assets/LogoPartnersBRANDS/walmart.png';
+import WomenBest from '../../assets/photosAlexis1/womensbest.png'
+import Skylar from '../../assets/photosAlexis1/SkylarLogo.jpg'
 
 
 
 
-const images = [gap,
-cerebral,
-champs,
-foria,
-fruitByTheFoot,
-lelo,
-pantene,summers,tula,walmart].map((image, index) => ({
+const images = [gap,cerebral,champs,foria,fruitByTheFoot,lelo,pantene,summers,tula,walmart, WomenBest, Skylar].map((image, index) => ({
     id: index,
     image
 }))

@@ -7,6 +7,8 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
 import SensualDanceWorkshop from '../../assets/photosAlexis1/Sensual-dance.jpg'
+import coffeeBeans from '../../assets/photosAlexis1/coffee.jpeg'
+import FoxyButton from '../../components/FoxyButton/FoxyButton';
 
 const benefits = [
   "It helps to strengthen the body, to make it fit and healthy",
@@ -99,7 +101,56 @@ const SensualDance = () => (
         </Box>
           </Box>
       </Box>
-      <Box sx={{mt: {xs: '100%', sm: '40%', md:'30%', lg: '20%'}}}/>
+
+      <Box sx={{
+        '@media (max-width: 400px)': { mt: '55vh'},
+        '@media (min-width: 401px) and (max-width: 500px)': { mt: '50vh'},
+        '@media (min-width: 501px) and (max-width: 599px)': {mt: '65%' },
+        '@media (min-width: 600px) and (max-width: 725px)': { mt: '60%'},
+        '@media (min-width: 726px) and (max-width: 900px)': {mt: '40vh' },
+        '@media (min-width: 901px)': {mt: '30vh' }
+    }}/>
+      <Typography variant="body2" sx={{ textAlign: 'start', mb: 3, fontSize: '1rem'}}>
+      You also have the option to include Cacao with this service. Why add cacao? Cacao is a heart opening medicine that invites us to love ourselves, provides energy, focus and healing. It will be intimate than most of us have ever known. That’s why it’s so powerful to combine dance and cacao. With this combination you’ll be ready to meet the goddess you are and connect with her on a deeper level.
+
+      </Typography>
+      <Box sx={{ display:'flex', justifyContent: 'center', alignItems: 'center', width: '100%', mb: 5}}>
+        <CardMedia
+            component="img"
+            sx={{ 
+              width: {xs: 100, sm: 200},
+              height: {xs: 100, sm: 200}
+            }}
+            image={coffeeBeans}
+            alt="Foxy"
+          />
+      </Box>
+
+      <Box sx={{height: '50vh'}}>
+      <Box sx={{position: 'relative', background: '#392D13', color: 'white'}}>
+        <Box sx={{textAlign: 'center', height: 100, display:'flex', justifyContent: 'center', alignItems: 'center'}}>
+          <Typography component="div" variant="" sx={{fontWeight: 700}}>Elevate your next event and include a “Awaken the Goddess” movement class </Typography>
+        </Box>
+      </Box>
+        <Box sx={{ mt: 20, textAlign: 'center'}}>
+            <FoxyButton
+              fullWidth={false}
+              variant="contained" 
+              label={"Book Workshop"} 
+              backgroundColor={'#CFC5B3'}
+              hoverBackgroundColor={'#CFC5B3'}
+              height={'initial'}
+              width={'initial'}
+              sx={{
+                borderRadius: 5,
+                fontSize:{xs: 12, md: 15},
+                color: 'white',
+                fontWeight: 700,
+                boxShadow: '0px 0px 20px 20px rgb(201 200 22 / 20%), inset 0px 0px 20px 0px rgb(255 244 204), 0px 1px 5px 0px rgb(226 214 180)'
+              }}
+            />
+        </Box>
+    </Box>
     </Container>
   </div>
 );

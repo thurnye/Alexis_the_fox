@@ -42,63 +42,63 @@ const About = () => {
   <Box className={styles.About}>
     <CssBaseline />
     <Container maxWidth="lg">
-    <Box sx={{ flexGrow: 1, mt: 4, display: {xs: 'none', sm: 'block'}}}>
-      <Grid 
-      container 
-      spacing={{ xs: 1, md: 2 }} 
-      columns={{ xs: 12, sm: 12, md: 12 }} 
-      sx={{ pb: 3}}
-      >
-          <Grid item xs={12} sm={6} md={9} sx={{}}>
-            <Box sx={{height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-              <HeaderTitle title={'Meet Alexis'}/>
-              <Box sx={{textAlign: 'center'}}>
-                <Typography component="div" variant="body2" gutterBottom sx={{mb: 3, px: 3}}>
-                  My name is Alexis Ramirez Jackson and I'm a fox of all trades. I'm a Latina, born and raised from New York City. I'm a feminine embodiment movement and cacao facilitator that specializes in trauma, content creator with over 5 million followers, mentor, mother, speaker, writer, creator, dancer, mental health advocate, and fashion designer. Like I said a fox of all trades lol.
-                </Typography>
-                <Typography component="div" variant="body2" gutterBottom sx={{my: 3, px: 3}}>
-                  Not many know my story but here it is in a nut shell.l've survived many battles from sexual, physical and mental abuse. I chose not to relive the chapter of my horror but to turn the page and write a new one. And FOX! I'm still writing.
-                </Typography>
-                <Typography component="div" variant="body2" gutterBottom sx={{my: 3, px: 3}}>
-                  What I went through and all the continues healing has led me on my mission to let you know that you aren't alone, and your story does matter. I promise to help woman find the courage to speak their truth, reclaim their sexiness and regain their confidence to love themselves.
-                </Typography>
+      <Box sx={{ flexGrow: 1, mt: 4, display: {xs: 'none', sm: 'block'}}}>
+        <Grid 
+        container 
+        spacing={{ xs: 1, md: 2 }} 
+        columns={{ xs: 12, sm: 12, md: 12 }} 
+        sx={{ pb: 3}}
+        >
+            <Grid item xs={12} sm={6} md={9} sx={{}}>
+              <Box sx={{height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+                <HeaderTitle title={'Meet Alexis'}/>
+                <Box sx={{textAlign: 'center'}}>
+                  <Typography component="div" variant="body2" gutterBottom sx={{mb: 3, px: 3}}>
+                    My name is Alexis Ramirez Jackson and I'm a fox of all trades. I'm a Latina, born and raised from New York City. I'm a feminine embodiment movement and cacao facilitator that specializes in trauma, content creator with over 5 million followers, mentor, mother, speaker, writer, creator, dancer, mental health advocate, and fashion designer. Like I said a fox of all trades lol.
+                  </Typography>
+                  <Typography component="div" variant="body2" gutterBottom sx={{my: 3, px: 3}}>
+                    Not many know my story but here it is in a nut shell.l've survived many battles from sexual, physical and mental abuse. I chose not to relive the chapter of my horror but to turn the page and write a new one. And FOX! I'm still writing.
+                  </Typography>
+                  <Typography component="div" variant="body2" gutterBottom sx={{my: 3, px: 3}}>
+                    What I went through and all the continues healing has led me on my mission to let you know that you aren't alone, and your story does matter. I promise to help woman find the courage to speak their truth, reclaim their sexiness and regain their confidence to love themselves.
+                  </Typography>
+                </Box>
               </Box>
-            </Box>
-          </Grid>
-          <Grid item xs={6} sm={6} md={3} sx={{display: {xs: 'none', sm:'block'}}}>
-            <Box>
-            <CardMedia
-              component="img"
-              sx={{  }}
-              image="https://i.pinimg.com/originals/9c/0e/50/9c0e5033d2e9bac33502f0a03732ae9d.jpg"
-              alt="Live from space album cover"
-            />
-            </Box>
-          </Grid>
-      </Grid>
-    </Box>
-    <Box sx={{display: {xs: 'block', sm: 'none'}, px: 3, mb: 8}}>
-      <Box sx={{float: 'right', width: '50%', mt: 3}}>
-        <CardMedia
-          component="img"
-          sx={{ width: '100%', mx: 1 }}
-          image="https://i.pinimg.com/originals/9c/0e/50/9c0e5033d2e9bac33502f0a03732ae9d.jpg"
-          alt="Live from space album cover"
-        />
+            </Grid>
+            <Grid item xs={6} sm={6} md={3} sx={{display: {xs: 'none', sm:'block'}}}>
+              <Box>
+              <CardMedia
+                component="img"
+                sx={{  }}
+                image="https://i.pinimg.com/originals/9c/0e/50/9c0e5033d2e9bac33502f0a03732ae9d.jpg"
+                alt="Live from space album cover"
+              />
+              </Box>
+            </Grid>
+        </Grid>
       </Box>
-      <Box>
-      {/* <Typography component="div" variant="h5" sx={{mt: 3, mb: 1}}>Meet Alexis</Typography> */}
-      <HeaderTitle title={'Meet Alexis'}/>
+      <Box sx={{display: {xs: 'block', sm: 'none'}, px: 3, mb: 8}}>
+        <Box sx={{float: 'right', width: '50%', mt: 3}}>
+          <CardMedia
+            component="img"
+            sx={{ width: '100%', mx: 1 }}
+            image="https://i.pinimg.com/originals/9c/0e/50/9c0e5033d2e9bac33502f0a03732ae9d.jpg"
+            alt="Live from space album cover"
+          />
+        </Box>
+        <Box>
+        {/* <Typography component="div" variant="h5" sx={{mt: 3, mb: 1}}>Meet Alexis</Typography> */}
+        <HeaderTitle title={'Meet Alexis'}/>
 
-      <Typography component="div" variant="body2" gutterBottom sx={{mb: 3,}}>
-        My name is Alexis Ramirez Jackson and I'm a fox of all trades. I'm a Latina, born and raised from New York City. I'm a feminine embodiment movement and cacao facilitator that specializes in trauma, content creator with over 5 million followers, mentor, mother, speaker, writer, creator, dancer, mental health advocate, and fashion designer. Like I said a fox of all trades lol.
-        <br/> <br/>        
-        Not many know my story but here it is in a nut shell.l've survived many battles from sexual, physical and mental abuse. I chose not to relive the chapter of my horror but to turn the page and write a new one. And FOX! I'm still writing.
-        <br/><br/> 
-        What I went through and all the continues healing has led me on my mission to let you know that you aren't alone, and your story does matter. I promise to help woman find the courage to speak their truth, reclaim their sexiness and regain their confidence to love themselves.
-      </Typography>
+        <Typography component="div" variant="body2" gutterBottom sx={{mb: 3,}}>
+          My name is Alexis Ramirez Jackson and I'm a fox of all trades. I'm a Latina, born and raised from New York City. I'm a feminine embodiment movement and cacao facilitator that specializes in trauma, content creator with over 5 million followers, mentor, mother, speaker, writer, creator, dancer, mental health advocate, and fashion designer. Like I said a fox of all trades lol.
+          <br/> <br/>        
+          Not many know my story but here it is in a nut shell.l've survived many battles from sexual, physical and mental abuse. I chose not to relive the chapter of my horror but to turn the page and write a new one. And FOX! I'm still writing.
+          <br/><br/> 
+          What I went through and all the continues healing has led me on my mission to let you know that you aren't alone, and your story does matter. I promise to help woman find the courage to speak their truth, reclaim their sexiness and regain their confidence to love themselves.
+        </Typography>
+        </Box>
       </Box>
-    </Box>
     </Container>
 
     <Box sx={{ flexGrow: 1, position: 'relative', background: '#955B35'}}>

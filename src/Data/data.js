@@ -30,13 +30,14 @@ import Retreat4 from '../assets/photosAlexis1/thailand3.png';
 import pastRetreat from '../assets/photosAlexis1/pastRetreat.jpg';
 import pin from '../assets/photosAlexis1/pin.png';
 import pointer from '../assets/photosAlexis1/clickPointer.png';
-import videoFoxy from '../assets/photosAlexis1/foxUnplugged.mov'
+import videoFoxy from '../assets/photosAlexis1/retreatVideo.mp4'
 import shopImage1 from '../assets/foxxyIMGSHOP/podcastIMG.png';
 import shopImage2 from '../assets/foxxyIMGSHOP/podcastIMG2.png';
 import shopImage3 from '../assets/foxxyIMGSHOP/YOUTUBEfox.png';
 import shopImage4 from '../assets/foxxyIMGSHOP/comingSoon.png';
 import shopImage5 from '../assets/photosAlexis2/image_6483441 (7).jpg';
-import snowyFox from '../assets/photosAlexis1/snowyFox.jpeg';
+import snowyFox from '../assets/photosAlexis1/fox.png'
+
 
 
 export const useDataCustomHook = () => {

@@ -9,20 +9,23 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import FoxyButton from '../../components/FoxyButton/FoxyButton';
-import CardMedia from '@mui/material/CardMedia';
-import snowyFox from '../../assets/photosAlexis1/snowyFox.jpeg'
+import {useDataCustomHook} from '../../Data/data';
 
-const initialState = {
-  name: '',
-  email: '',
-  interest: '',
-  message: ''
-}
 
-const services = ['Sensual Dance', 'Caco Circles', 'Retreats', 'Partnerships', 'Speaking', 'Engagements'];
 const Contact = () => {
+  const data = useDataCustomHook();
+  const {contact: {img, initialState, forms, btnText}} = data;
   const [state, setState] = useState(initialState);
 
+
+
+  const handleChange = (event, name) => {
+    const value = event.target.value;
+    setState(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
 
   const handleSubmit = () => {
     console.log('STATE::::', state);
@@ -35,7 +38,7 @@ const Contact = () => {
     <CssBaseline />
       <Container maxWidth="xl">
         <Box sx={{ position: 'relative'  }}>
-        <Box sx={{ height: { xs: '17vh', md: '25vh' }, bgcolor: '#cfe8fc', width: '100%', backgroundImage: `url(${snowyFox})` }}>
+        <Box sx={{ height: { xs: '17vh', md: '25vh' }, bgcolor: '#cfe8fc', width: '100%', backgroundImage: `url(${img})` }}>
         </Box>
           <Box sx={{width: {xs: '90%', lg:'50%'}, position: 'absolute', left: '50%', transform: 'translateX(-50%)', background: 'white', p: 1, mt: -9}}>
         <Box sx={{
@@ -43,11 +46,16 @@ const Contact = () => {
           color: 'white',
           p: 3
         }}>
-
-          {/* Name */}
-          <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'end', mt: 4}}>
-            <Typography variant="body2" sx={{mr: 1}}>Name</Typography>
-              <TextField id="standard-basic" variant="standard" sx={{
+          {forms.map((el) => 
+          el.formType === 'input' ?
+          <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'end', mt: 4}} key={el.name}>
+            <Typography variant="body2" sx={{mr: 1}}>{el.label}</Typography>
+              <TextField 
+              id="standard-basic" 
+              variant="standard"
+              multiline={el.multiline} 
+              rows={el.rows}
+              sx={{
                 color: 'white', 
                 flexGrow: 1, 
                 '& .MuiInput-underline:before': {
@@ -63,48 +71,19 @@ const Contact = () => {
                   color: 'white !important', // Change text input color to white on focus
                 },
             }}
-            onChange={(event) => {
-              setState((prev)=> ({...prev, name: event.target.value }));
-            }}
+            onChange={(event) => handleChange(event, el.name)}
             />
           </Box>
-          {/* Email */}
-          <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'end', mt: 4}}>
-            <Typography variant="body2" sx={{mr: 1}}>Email</Typography>
-              <TextField id="standard-basic" variant="standard" sx={{
-                color: 'white', 
-                flexGrow: 1, 
-                '& .MuiInput-underline:before': {
-                  borderBottomColor: 'white !important', // Change border bottom color to white
-                },
-                '& .MuiInput-underline.Mui-focused:after': {
-                  borderBottomColor: 'white !important', // Change border bottom color to white on focus
-                },
-                '& .MuiInputBase-input': {
-                  color: 'white !important', // Change text input color to white
-                },
-                '& .MuiInputBase-input:focus': {
-                  color: 'white !important', // Change text input color to white on focus
-                },
-            }}
-            onChange={(event) => {
-              setState((prev)=> ({...prev, email: event.target.value }));
-            }}
-            />
-          </Box>
-
-          {/* Services */}
+          :
           <Box sx={{display: 'flex', flexDirection: 'column', mt: 4 }}>
             <Typography variant="body2" sx={{mt: 1, 
-              textAlign: 'center', }}>Interested In</Typography>
+              textAlign: 'center', }}>{el.label}</Typography>
              <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
               <Select
                 labelId="demo-simple-select-standard-label"
                 id="demo-simple-select-standard"
                 value={state.interest}
-                onChange={(event) => {
-                  setState((prev)=> ({...prev, interest: event.target.value }));
-                }}
+                onChange={(event) => handleChange(event, el.name)}
                 label="Age"
                 sx={{
                   color: "white",
@@ -126,45 +105,17 @@ const Contact = () => {
                 <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
-                {services.map((el) => <MenuItem value={el} key={el}>{el}</MenuItem>)}
+                {el.options.map((opt) => <MenuItem value={opt} key={opt}>{opt}</MenuItem>)}
               </Select>
             </FormControl>
           </Box>
+          )}
 
-          {/* Message */}
-          <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'end', my: 4}}>
-            <Typography variant="body2" sx={{mr: 1}}>Message</Typography>
-              <TextField 
-              id="standard-multiline-static"
-              multiline
-              rows={4}
-              variant="standard"
-              sx={{
-                color: 'white', 
-                flexGrow: 1, 
-                '& .MuiInput-underline:before': {
-                  borderBottomColor: 'white !important', // Change border bottom color to white
-                },
-                '& .MuiInput-underline.Mui-focused:after': {
-                  borderBottomColor: 'white !important', // Change border bottom color to white on focus
-                },
-                '& .MuiInputBase-input': {
-                  color: 'white !important', // Change text input color to white
-                },
-                '& .MuiInputBase-input:focus': {
-                  color: 'white !important', // Change text input color to white on focus
-                },
-            }}
-            onChange={(event) => {
-              setState((prev)=> ({...prev, message: event.target.value }));
-            }}
-            />
-          </Box>
-          <Box sx={{textAlign: 'center'}}>
+          <Box sx={{textAlign: 'center', mt: 10}}>
             <FoxyButton
               fullWidth={false}
               variant="contained" 
-              label={"Submit"} 
+              label={btnText} 
               backgroundColor={'#312813'}
               hoverBackgroundColor={'#312813'}
               height={'initial'}

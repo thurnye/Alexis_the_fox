@@ -3,34 +3,21 @@ import React from 'react';
 import styles from './Brands.module.css';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import gap from '../../assets/LogoPartnersBRANDS/adoreME.png';
-import cerebral from '../../assets/LogoPartnersBRANDS/cerebral.png';
-import champs from '../../assets/LogoPartnersBRANDS/Champs.png';
-import foria from '../../assets/LogoPartnersBRANDS/Foria.png';
-import fruitByTheFoot from '../../assets/LogoPartnersBRANDS/fruitbythefoot.png';
-import lelo from '../../assets/LogoPartnersBRANDS/Lelo.png';
-import pantene from '../../assets/LogoPartnersBRANDS/Pantene.png';
-import summers from '../../assets/LogoPartnersBRANDS/summers.jpg';
-import tula from '../../assets/LogoPartnersBRANDS/Tula.png';
-import walmart from '../../assets/LogoPartnersBRANDS/walmart.png';
-import WomenBest from '../../assets/photosAlexis1/womensbest.png'
-import Skylar from '../../assets/photosAlexis1/SkylarLogo.jpg'
+import {useDataCustomHook} from '../../Data/data';
 
 
 
-
-const images = [gap,cerebral,champs,foria,fruitByTheFoot,lelo,pantene,summers,tula,walmart, WomenBest, Skylar].map((image, index) => ({
-    id: index,
-    image
-}))
 
 const Brands = ({ speed = 25000 }) => {
+  const data = useDataCustomHook();
+  const {home: {brand: {images, header}}} = data;
+
   return(
   <Box className={styles.Brands} sx={{background: '#F7F7F7', position: 'relative'}}>
        <Typography variant="h6" sx={{
         textAlign: 'center',
         py: 2
-      }}>Brands I've worked with</Typography>
+      }}>{header}</Typography>
       <div className={styles.inner}>
         <div className={styles.wrapper}>
           <section style={{ "--speed": `${speed}ms` }}>

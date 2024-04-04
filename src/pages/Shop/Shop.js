@@ -1,48 +1,30 @@
 import React from 'react';
 import styles from './Shop.module.css';
-import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import CardMedia from '@mui/material/CardMedia';
-import shopImage1 from '../../assets/foxxyIMGSHOP/podcastIMG.png';
-import shopImage2 from '../../assets/foxxyIMGSHOP/podcastIMG2.png';
-import shopImage3 from '../../assets/foxxyIMGSHOP/YOUTUBEfox.png';
-import shopImage4 from '../../assets/foxxyIMGSHOP/comingSoon.png';
-import shopImage5 from '../../assets/photosAlexis2/image_6483441 (7).jpg';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
+import {useDataCustomHook} from '../../Data/data';
 
-const Shop = () => (
+const Shop = () => {
+  const data = useDataCustomHook();
+  const {shop: {img, header, subHeader}} = data;
+  
+  return(
   <div className={styles.Shop}>
     <Container maxWidth="lg">
-      {/* <Box sx={{height:'70vh',  display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        <Typography variant="h3" gutterBottom>
-        <CardMedia
-                component="img"
-                sx={{ 
-                  width: {xs: '100%', sm: 300},
-                }}
-                image={shopImage5}
-                alt="foxappeal"
-              />
-    Coming Soon...
-  </Typography>
-      </Box> */}
       <CardMedia>
   <Box sx={{ position: 'relative' }}>
     <CardMedia
       component="img"
       height="800"
-      image={shopImage5}
+      image={img}
+      alt="foxy brand"
     />
     <Box
       sx={{
         position: 'absolute',
         bottom: 100,
-        // left: 100,
-        // center:100,
         textAlign:'center',
         width: '100%',
         bgcolor: 'rgba(0, 0, 0, 0.54)',
@@ -50,8 +32,8 @@ const Shop = () => (
         padding: '0px',
       }}
     >
-      <Typography variant="h5">Coming Soon...</Typography>
-      <Typography variant="body2">Summer 2024</Typography>
+      <Typography variant="h5">{header}</Typography>
+      <Typography variant="body2">{subHeader}</Typography>
     </Box>
   </Box>
  
@@ -126,7 +108,7 @@ const Shop = () => (
       </Box> */}
     </Container>
   </div>
-);
+)};
 
 
 

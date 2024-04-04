@@ -9,36 +9,13 @@ import CardContent from '@mui/material/CardContent';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
-import Foxy from '../../assets/photosAlexis1/meetFoxxy.jpg'
-
-const services = {
-  withDesc : [
-    {
-      primary: 'AWAKEN THE GODDESS',
-      secondary: 'MOVEMENT CLASS',
-      description: ''
-    },
-    {
-      primary: 'CACAO CIRCLE',
-      secondary: '',
-      description: ''
-    }
-  ],
- withoutDesc: [ {
-    primary: 'FOXES UNPLUG',
-    secondary: 'RETREATS',
-    description: "Alexis hosts women's retreats. She is also available to facilitate at your next retreat!. Click below to join us on one of our retreats or see how Alexis can support your event."
-  },
-  {
-    primary: 'Content Creator',
-    secondary: '',
-    description: 'Interested in hiring me for speaking, engagements, partnerships or other business inquires'
-  }
-  ]
-}
+import {useDataCustomHook} from '../../Data/data';
 
 const About = () => {
-  
+
+  const data = useDataCustomHook();
+  const {meetAlexis: {header, foxyImg, about, subHeader, services, exploreService}} = data;
+
   return(
   <Box className={styles.About}>
     <CssBaseline />
@@ -52,17 +29,12 @@ const About = () => {
         >
             <Grid item xs={12} sm={6} md={9} sx={{}}>
               <Box sx={{height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-                <HeaderTitle title={'Meet Alexis'}/>
+                <HeaderTitle title={header}/>
                 <Box sx={{textAlign: 'center'}}>
-                  <Typography component="div" variant="body2" gutterBottom sx={{mb: 3, px: 3}}>
-                    My name is Alexis Ramirez Jackson and I'm a fox of all trades. I'm a Latina, born and raised from New York City. I'm a feminine embodiment movement and cacao facilitator that specializes in trauma, content creator with over 5 million followers, mentor, mother, speaker, writer, creator, dancer, mental health advocate, and fashion designer. Like I said a fox of all trades lol.
-                  </Typography>
-                  <Typography component="div" variant="body2" gutterBottom sx={{my: 3, px: 3}}>
-                    Not many know my story but here it is in a nut shell.l've survived many battles from sexual, physical and mental abuse. I chose not to relive the chapter of my horror but to turn the page and write a new one. And FOX! I'm still writing.
-                  </Typography>
-                  <Typography component="div" variant="body2" gutterBottom sx={{my: 3, px: 3}}>
-                    What I went through and all the continues healing has led me on my mission to let you know that you aren't alone, and your story does matter. I promise to help woman find the courage to speak their truth, reclaim their sexiness and regain their confidence to love themselves.
-                  </Typography>
+                  {about.map((el, i) => <Typography key={`about_${i}`} component="div" variant="body2" gutterBottom sx={{mb: 3, px: 3}}>
+                    {el}
+                    </Typography>
+                  )}
                 </Box>
               </Box>
             </Grid>
@@ -70,8 +42,7 @@ const About = () => {
               <Box>
               <CardMedia
                 component="img"
-                sx={{  }}
-                image={Foxy}
+                image={foxyImg}
                 alt="Foxy"
               />
               </Box>
@@ -83,20 +54,18 @@ const About = () => {
           <CardMedia
             component="img"
             sx={{ width: '100%', mx: 1 }}
-            image={Foxy}
+            image={foxyImg}
             alt="Foxy"
           />
         </Box>
         <Box>
-        {/* <Typography component="div" variant="h5" sx={{mt: 3, mb: 1}}>Meet Alexis</Typography> */}
-        <HeaderTitle title={'Meet Alexis'}/>
+        <HeaderTitle title={header}/>
 
         <Typography component="div" variant="body2" gutterBottom sx={{mb: 3,}}>
-          My name is Alexis Ramirez Jackson and I'm a fox of all trades. I'm a Latina, born and raised from New York City. I'm a feminine embodiment movement and cacao facilitator that specializes in trauma, content creator with over 5 million followers, mentor, mother, speaker, writer, creator, dancer, mental health advocate, and fashion designer. Like I said a fox of all trades lol.
-          <br/> <br/>        
-          Not many know my story but here it is in a nut shell.l've survived many battles from sexual, physical and mental abuse. I chose not to relive the chapter of my horror but to turn the page and write a new one. And FOX! I'm still writing.
-          <br/><br/> 
-          What I went through and all the continues healing has led me on my mission to let you know that you aren't alone, and your story does matter. I promise to help woman find the courage to speak their truth, reclaim their sexiness and regain their confidence to love themselves.
+          {about.map((el) => <React.Fragment key={el}>
+            {el}
+            <br/> <br/>   
+          </React.Fragment>)}
         </Typography>
         </Box>
       </Box>
@@ -111,7 +80,7 @@ const About = () => {
           fontWeight: 400,
           fontStyle: 'normal',
           textAlign: 'center'
-        }}>Work with Alexis</Typography>
+        }}>{subHeader}</Typography>
       </Box>
       <Box sx={{flexGrow: 1, py: 3, px: 3}}>
         <Grid container spacing={{ xs: 2, md: 1 }} columns={{ xs: 4, sm: 12, md: 12 }}>
@@ -152,7 +121,7 @@ const About = () => {
                 <Grid item xs={12} sm={12}>
                   <Box sx={{width: 'inherit'}}>
                     <Typography variant="caption" component="div" sx={{color: 'white', fontFamily:'monospace', fontWeight: 700 }}>
-                      EXPLORE INDIVIDUAL OR GROUP SESSIONS WITH ALEXIS FROM CACAO CIRCLES TO SENSUAL MOVEMENT CLASSES. EACH SESSION IS DESIGNED WITH YOUR HIGHEST INTENIONS AT THE CENTER.
+                      {exploreService}
                     </Typography>
                   </Box>
                 </Grid>

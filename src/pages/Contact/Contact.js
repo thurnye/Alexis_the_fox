@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Contact.module.css';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
@@ -10,11 +10,24 @@ import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import FoxyButton from '../../components/FoxyButton/FoxyButton';
 import CardMedia from '@mui/material/CardMedia';
+import snowyFox from '../../assets/photosAlexis1/snowyFox.jpeg'
 
-
+const initialState = {
+  name: '',
+  email: '',
+  interest: '',
+  message: ''
+}
 
 const services = ['Sensual Dance', 'Caco Circles', 'Retreats', 'Partnerships', 'Speaking', 'Engagements'];
 const Contact = () => {
+  const [state, setState] = useState(initialState);
+
+
+  const handleSubmit = () => {
+    console.log('STATE::::', state);
+    setState(initialState);
+  }
 
   
   return(
@@ -22,7 +35,8 @@ const Contact = () => {
     <CssBaseline />
       <Container maxWidth="xl">
         <Box sx={{ position: 'relative'  }}>
-          <Box sx={{height: {xs:'17vh', md: '25vh'}, bgcolor: '#cfe8fc'}}></Box>
+        <Box sx={{ height: { xs: '17vh', md: '25vh' }, bgcolor: '#cfe8fc', width: '100%', backgroundImage: `url(${snowyFox})` }}>
+        </Box>
           <Box sx={{width: {xs: '90%', lg:'50%'}, position: 'absolute', left: '50%', transform: 'translateX(-50%)', background: 'white', p: 1, mt: -9}}>
         <Box sx={{
           backgroundColor: '#955B35',
@@ -48,7 +62,11 @@ const Contact = () => {
                 '& .MuiInputBase-input:focus': {
                   color: 'white !important', // Change text input color to white on focus
                 },
-            }}/>
+            }}
+            onChange={(event) => {
+              setState((prev)=> ({...prev, name: event.target.value }));
+            }}
+            />
           </Box>
           {/* Email */}
           <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'end', mt: 4}}>
@@ -68,7 +86,11 @@ const Contact = () => {
                 '& .MuiInputBase-input:focus': {
                   color: 'white !important', // Change text input color to white on focus
                 },
-            }}/>
+            }}
+            onChange={(event) => {
+              setState((prev)=> ({...prev, email: event.target.value }));
+            }}
+            />
           </Box>
 
           {/* Services */}
@@ -79,8 +101,10 @@ const Contact = () => {
               <Select
                 labelId="demo-simple-select-standard-label"
                 id="demo-simple-select-standard"
-                value={10}
-                onChange={() => ''}
+                value={state.interest}
+                onChange={(event) => {
+                  setState((prev)=> ({...prev, interest: event.target.value }));
+                }}
                 label="Age"
                 sx={{
                   color: "white",
@@ -102,9 +126,7 @@ const Contact = () => {
                 <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+                {services.map((el) => <MenuItem value={el} key={el}>{el}</MenuItem>)}
               </Select>
             </FormControl>
           </Box>
@@ -132,7 +154,11 @@ const Contact = () => {
                 '& .MuiInputBase-input:focus': {
                   color: 'white !important', // Change text input color to white on focus
                 },
-            }}/>
+            }}
+            onChange={(event) => {
+              setState((prev)=> ({...prev, message: event.target.value }));
+            }}
+            />
           </Box>
           <Box sx={{textAlign: 'center'}}>
             <FoxyButton
@@ -142,6 +168,7 @@ const Contact = () => {
               backgroundColor={'#312813'}
               hoverBackgroundColor={'#312813'}
               height={'initial'}
+              onClick={handleSubmit}
               sx={{
                 width: 250,
                 borderRadius: 5,

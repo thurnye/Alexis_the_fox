@@ -39,7 +39,7 @@ const Home = () => {
             <CardContent sx={{ flex: '1 0 auto', textAlign: 'center' }}>
               <Typography component="div" variant="h3" sx={{color: '#8e4e32', fontFamily: "Gotu, sans-serif"}}> HEY FOXY THANG!</Typography>
               <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15}, display: {xs: 'none', sm: 'block'}, mt: 3, color:'#94998a'}}>
-                HOST OF FOXY PODCAST, FEMINIE EMODIMENT FACILTATOR, CACAO HEALER, CONTENT CREATOR, INSPIRATIONAL WRITER AND SPEAKER
+                HOST OF FOXY PODCAST, FEMININE EMODIMENT FACILTATOR, CACAO HEALER, CONTENT CREATOR, INSPIRATIONAL WRITER AND SPEAKER
               </Typography>
             </CardContent>
             <Box sx={{textAlign: 'center', display: {xs:'none', md: 'block'}}}>

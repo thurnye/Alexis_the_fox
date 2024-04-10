@@ -7,6 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import FoxyButton from '../../components/FoxyButton/FoxyButton';
 import {useDataCustomHook} from '../../Data/data';
+import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
 
 const SensualDance = () => {
   const data = useDataCustomHook();
@@ -23,7 +24,11 @@ const SensualDance = () => {
           pt: {xs: 3, md: 5},
           pb: 22
           }}>
-          <Typography component="div" variant="h3" sx={{ fontFamily: "BDSans", textAlign: 'center', display: {xs:'none', lg: 'block'}}}> {header}</Typography>
+            <Box sx={{ fontFamily: "BDSans", textAlign: 'center', display: {xs:'none', lg: 'block'}}}>
+
+            <HeaderTitle title={header}/>
+            </Box>
+          {/* <Typography component="div" variant="h3" sx={{ fontFamily: "BDSans", textAlign: 'center', display: {xs:'none', lg: 'block'}}}> {header}</Typography> */}
           <Box sx={{flexGrow: 1, px: {md: 2}, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <Box sx={{ display: 'flex', flexDirection: 'column', pt: 3, border: 'none', borderShadow: 'none' }}>
       
@@ -31,7 +36,10 @@ const SensualDance = () => {
                 
                 <Box sx={{ display: 'flex', flexDirection: 'column', maxWidth: 'md' }}>
                   <CardContent sx={{ flex: '1 0 auto'}}>
-                    <Typography component="div" variant="h3" sx={{ fontFamily: "BDSans", textAlign: 'center', display: {xs:'block', lg: 'none'}}}> {header}</Typography>
+                    <Box sx={{ fontFamily: "BDSans", textAlign: 'center', display: {xs:'block', lg: 'none'}}}>
+                      <HeaderTitle title={header}/>
+                    </Box>
+                    {/* <Typography component="div" variant="h3" sx={{ fontFamily: "BDSans", textAlign: 'center', display: {xs:'block', lg: 'none'}}}> {header}</Typography> */}
                   </CardContent>
 
                   <Box sx={{textAlign: 'start', display: {xs:'none', md: 'block'}}}>
@@ -89,8 +97,8 @@ const SensualDance = () => {
         '@media (min-width: 401px) and (max-width: 500px)': { mt: '50vh'},
         '@media (min-width: 501px) and (max-width: 599px)': {mt: '65%' },
         '@media (min-width: 600px) and (max-width: 725px)': { mt: '60%'},
-        '@media (min-width: 726px) and (max-width: 900px)': {mt: '40vh' },
-        '@media (min-width: 901px)': {mt: '30vh' }
+        '@media (min-width: 726px) and (max-width: 1000px)': {mt: '40vh' },
+        '@media (min-width: 1001px)': {mt: '32vh' }
     }}/>
       <Typography variant="body2" sx={{ textAlign: 'start', mb: 3, fontSize: '1rem'}}>
       {subText}

@@ -7,15 +7,17 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import {useDataCustomHook} from '../../Data/data';
+import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
 
 const Podcast = () => {
   const data = useDataCustomHook();
-  const {podcastVlog: {vlog, podcast:{soon, air}}} = data;
+  const {podcastVlog: {vlog, podcast:{header, soon, air}}} = data;
   
   return(
   <div className={styles.Podcast}>
     <Container maxWidth="lg">
       <Box sx={{ flexGrow: 1, mt:12 }}>
+      <HeaderTitle title={vlog.header} />
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
           <Grid item xs={12} md={6}>
             <Box sx={{display:'flex', alignItems:"center", justifyContent:"center"}}>
@@ -53,7 +55,8 @@ const Podcast = () => {
       <Box sx={{ flexGrow: 1, mt:12 }}>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>      
           <Grid item xs={12} md={6} sx={{display:'flex', alignItems:"center", justifyContent:"center"}}>
-            <Box sx={{display:'flex', alignItems:"center", justifyContent:"center"}}>
+            <Box sx={{display:'flex', flexDirection: "column", alignItems:"center", justifyContent:"center"}}>
+              <HeaderTitle title={header} />
             <CardMedia
                 component="img"
                 sx={{ 

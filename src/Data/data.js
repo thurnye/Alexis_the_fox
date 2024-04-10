@@ -232,6 +232,7 @@ export const useDataCustomHook = () => {
         },
         podcastVlog: {
             vlog: {
+                header: 'Vlog',
                 img: shopImage1,
                 text: 'WELCOME TO MY VLOG JOURNAL. HERE I WILL SHARE PARTS OF MY LIFE, FROM MY DAILY ROUTINES TO MY INNER THOUGHTS.',
                 link: {
@@ -240,6 +241,7 @@ export const useDataCustomHook = () => {
                 }
             },
             podcast: {
+                header: 'Podcast',
                 soon: {
                     img: shopImage4
                 },

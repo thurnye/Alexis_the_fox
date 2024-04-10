@@ -10,23 +10,17 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
+import {useDataCustomHook} from '../../Data/data';
+
 
 const colorAlexis = "#8F8A7A";
 
-const pages = [
-  { label: 'Home', path: '/' },
-  { label: 'Meet Alexis', path: 'meet-me' },
-  { label: 'Sensual Dance', path: 'sensual-dance' },
-  { label: 'Cacao Circles', path: 'cacao-circles' },
-  { label: 'Retreats Event', path: 'retreats-event' },
-  { label: 'Vlog/Podcast', path: 'podcast' },
-  { label: 'Shop', path: 'shop' },
-  { label: 'Contact', path: 'contact' }
-];
 
 function Navbar({activeLink, setActiveLink}) {
   const location = useLocation();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const data = useDataCustomHook();
+  const {name, header: {pages}} = data;
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -62,7 +56,7 @@ function Navbar({activeLink, setActiveLink}) {
               textDecoration: 'none',
             }}
           >
-            AlexisThatFox
+            {name}
           </Typography>
 
           <Box sx={{ flexGrow: 1,  display: { xs: 'flex', md: 'none' } }}>
@@ -100,6 +94,10 @@ function Navbar({activeLink, setActiveLink}) {
                   href={page.path} 
                   underline="none" 
                   sx={{
+                    fontFamily: 'Assistant, sans-serif',
+                    fontOpticalSizing: 'auto',
+                    fontStyle: 'normal',
+                    fontWeight: 700,
                     color: activeLink === page.path ? '#564e37' : colorAlexis, 
                     cursor:"pointer",
                     "&:hover":{
@@ -132,7 +130,7 @@ function Navbar({activeLink, setActiveLink}) {
               textDecoration: 'none',
             }}
           >
-            AlexisThatFox
+            {name}
           </Typography>
           <Box sx={{ flexGrow: 1, justifyContent:"center", alignItems:"flex-start" , textAlign:"center" , display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -140,6 +138,10 @@ function Navbar({activeLink, setActiveLink}) {
               href={page.path} 
               underline="none" 
               sx={{
+                fontFamily: 'Assistant, sans-serif',
+                fontOpticalSizing: 'auto',
+                fontStyle: 'normal',
+                fontWeight: 700,
                 color: activeLink === page.path ? '#564e37' : colorAlexis, 
                 mx:3, 
                 cursor:"pointer",

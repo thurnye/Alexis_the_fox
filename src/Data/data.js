@@ -21,7 +21,7 @@ import cacaoCircle from '../assets/photosAlexis1/cacaoCircle.png';
 import cocaoBrew from '../assets/photosAlexis1/cacaoBrew.png';
 import grlTrip from '../assets/photosAlexis2/retreat_girls_trips.jpg';
 import healing from '../assets/photosAlexis2/retreat_healing.jpg';
-import coupleRetreat from '../assets/photosAlexis2/retreat_outing.jpeg';
+import coupleRetreat from '../assets/photosAlexis2/coupleRetreat.png';
 import foxie from '../assets/photosAlexis2/foxie1.png';
 import Retreat1 from '../assets/photosAlexis1/Healing_Retreat.png';
 import Retreat2 from '../assets/photosAlexis1/thailand1.png';
@@ -41,13 +41,10 @@ import snowyFox from '../assets/photosAlexis1/fox.png'
 
 
 export const useDataCustomHook = () => {
-    // const {t} = useTranslation();
-
     const data = {
         name: 'AlexisThatFox',
-        // buttonText: t('work_with_us'),
         header: {
-            navs:[
+            pages:[
                 { label: 'Home', path: '/' },
                 { label: 'Meet Alexis', path: 'meet-me' },
                 { label: 'Sensual Dance', path: 'sensual-dance' },

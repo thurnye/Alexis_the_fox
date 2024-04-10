@@ -31,7 +31,7 @@ const About = () => {
               <Box sx={{height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
                 <HeaderTitle title={header}/>
                 <Box sx={{textAlign: 'center'}}>
-                  {about.map((el, i) => <Typography key={`about_${i}`} component="div" variant="body2" gutterBottom sx={{mb: 3, px: 3}}>
+                  {about.map((el, i) => <Typography key={`about_${i}`} component="div" variant="body2" gutterBottom sx={{mb: 3, px: 3,fontFamily: "Kollektif"}}>
                     {el}
                     </Typography>
                   )}
@@ -61,7 +61,7 @@ const About = () => {
         <Box>
         <HeaderTitle title={header}/>
 
-        <Typography component="div" variant="body2" gutterBottom sx={{mb: 3,}}>
+        <Typography component="div" variant="body2" gutterBottom sx={{mb: 3,fontFamily: "Kollektif"}}>
           {about.map((el) => <React.Fragment key={el}>
             {el}
             <br/> <br/>   
@@ -72,17 +72,17 @@ const About = () => {
     </Container>
 
     <Box sx={{ flexGrow: 1, position: 'relative', background: '#955B35'}}>
-      <Box sx={{ width: 270, position: 'absolute', top: -15, left: '50%', transform: 'translateX(-50%)', zIndex: 9999, background: 'white', p: 0.4,}}>
-        <Typography component="div" variant="h4" sx={{
+      <Box sx={{ width: 270, position: 'absolute', top: -35, left: '50%', transform: 'translateX(-50%)', zIndex: 9999, background: 'white', p: 0.4,}}>
+        <Typography component="div" variant="h2" sx={{
           // px: 2, 
           border: '2px solid #D7D3CA', 
-          fontFamily: "Indie Flower, cursive",
+          fontFamily: "BDSans",
           fontWeight: 400,
           fontStyle: 'normal',
           textAlign: 'center'
         }}>{subHeader}</Typography>
       </Box>
-      <Box sx={{flexGrow: 1, py: 3, px: 3}}>
+      <Box sx={{flexGrow: 1, py: 5, px: 3}}>
         <Grid container spacing={{ xs: 2, md: 1 }} columns={{ xs: 4, sm: 12, md: 12 }}>
           <Grid item xs={12} md={6}>
             <Box sx={{flexGrow: 1, py: 3, px: 3}}>
@@ -96,7 +96,7 @@ const About = () => {
                           width: {xs: 'initial', md: 170},
                           textAlign: 'center',
                           fontSize: {xs: '1rem', sm:'1.5rem'},
-                          fontFamily:'monospace', fontWeight: 700,
+                          fontFamily: "Kollektif", fontWeight: 700,
                           color:'#cfcfcf' 
                         }}
                           >

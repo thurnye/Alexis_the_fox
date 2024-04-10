@@ -11,6 +11,7 @@ import FoxyButton from '../../components/FoxyButton/FoxyButton';
 import {useDataCustomHook} from '../../Data/data';
 
 
+
 const positions = [
   { top: 0, left: 0 },
   { top: 0, right: 0 },
@@ -48,8 +49,9 @@ const Retreats = () => {
               position: 'absolute', left: '50%', top: 4, transform: 'translateX(-50%)',
               
             }}>
-              <Typography variant="h3" sx={{mb: 2}}>{jumbotron.header}</Typography>
-              <Typography variant="body2" sx={{color: '#955b35', fontWeight: 700}}>{jumbotron.subHeader}</Typography>
+          
+              <Typography variant="h2" sx={{my: 2, mb:0, fontFamily:"BDSans"}}>{jumbotron.header}</Typography>
+              <Typography variant="body2" sx={{color: '#955b35', fontWeight: 700,fontFamily:"KollektifBold"}}>{jumbotron.subHeader}</Typography>
             </Box>
           </Box>
           <Box sx={{width: {xs: '70%', lg:'50%'}, position: 'absolute', left: '50%', transform: 'translateX(-50%)', background: 'white', p: 1, mt: {xs: -5, sm: -9}}}>
@@ -67,13 +69,13 @@ const Retreats = () => {
           </Box>
         </Box>
         <Box sx={{ mt: {xs:'27vh', md: '40vh'} }}>
-          <Typography variant="body2" sx={{textAlign: 'center', width: {xs: '85%', md: '70%'}, m: 'auto'}}>
+          <Typography variant="body2" sx={{textAlign: 'center', width: {xs: '85%', md: '70%'}, m: 'auto',fontFamily:"Kollektif"}}>
            {jumbotron.description}
           </Typography>
 
         </Box>
         <Box sx={{my: 5}}>
-          <Typography variant="h3" sx={{textAlign: 'center', m: 'auto'}}>
+          <Typography variant="h1" sx={{textAlign: 'center', m: 'auto',fontFamily:"BDSans"}}>
             {header}
           </Typography>
         </Box>
@@ -81,7 +83,7 @@ const Retreats = () => {
           <Box sx={{background: '#955B35', mb: 5, p: 5, color:'white' }}>
             <Box sx={{ display: {xs: 'block', sm: 'flex'}, border: 'none', borderShadow: 'none', alignItems: {xs: 'center', md: 'flex-start'} }}>
             <Box sx={{px: 1, textAlign: 'center'}}>
-                <Typography component="div" variant="h3" sx={{ fontFamily: "Gotu, sans-serif",  display: {xs: 'block', sm: 'none'}, mb: 3}}>{healing.header}</Typography>
+                <Typography component="div" variant="h1" sx={{ fontFamily:"BDSans",  display: {xs: 'block', sm: 'none'}, mb: 3}}>{healing.header}</Typography>
                 <CardMedia
                     component="img"
                     sx={{ 
@@ -97,8 +99,8 @@ const Retreats = () => {
               </Box>
               <Box sx={{ display: 'flex', flexDirection: 'column', color:'white' }}>
                 <CardContent sx={{ flex: '1 0 auto', textAlign: 'center' }}>
-                  <Typography component="div" variant="h3" sx={{ fontFamily: "Gotu, sans-serif", display: {xs: 'none', sm: 'block'}}}> {healing.header}</Typography>
-                  <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15}, color:'white'}}>
+                  <Typography component="div" variant="h1" sx={{ fontFamily:"BDSans", display: {xs: 'none', sm: 'block'}}}> {healing.header}</Typography>
+                  <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15}, color:'white',fontFamily:"KollektifBold"}}>
                     {healing.description}
                   </Typography>
                 </CardContent>
@@ -106,7 +108,7 @@ const Retreats = () => {
             </Box>
             <Box sx={{ display: {xs: 'block', sm: 'flex'}, border: 'none', borderShadow: 'none', alignItems: {xs: 'center', md: 'flex-start'}, flexDirection: 'row-reverse' }}>
             <Box sx={{px: 1, textAlign: 'center'}}>
-                <Typography component="div" variant="h3" sx={{ fontFamily: "Gotu, sans-serif",  display: {xs: 'block', sm: 'none'}, m: 3}}> {girlsTrip.header}</Typography>
+                <Typography component="div" variant="h1" sx={{ fontFamily:"BDSans",  display: {xs: 'block', sm: 'none'}, m: 3}}> {girlsTrip.header}</Typography>
                 <CardMedia
                     component="img"
                     sx={{ 
@@ -122,8 +124,8 @@ const Retreats = () => {
               </Box>
               <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                 <CardContent sx={{ flex: '1 0 auto', textAlign: 'center' }}>
-                  <Typography component="div" variant="h3" sx={{ fontFamily: "Gotu, sans-serif", display: {xs: 'none', sm: 'block'}}}> {girlsTrip.header}</Typography>
-                  <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15}, color:'white'}}>
+                  <Typography component="div" variant="h1" sx={{ fontFamily:"BDSans", display: {xs: 'none', sm: 'block'}}}> {girlsTrip.header}</Typography>
+                  <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15}, color:'white',fontFamily:"KollektifBold"}}>
                   {girlsTrip.description}
                   </Typography>
                 </CardContent>
@@ -150,7 +152,7 @@ const Retreats = () => {
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column'}}>
                   <CardContent sx={{ flex: '1 0 auto', textAlign: 'start' }}>
-                    <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15}}}>
+                    <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15},fontFamily:"Kollektif"}}>
                       {couples.description}
                     </Typography>
                   </CardContent>
@@ -182,7 +184,7 @@ const Retreats = () => {
                 
             </Grid>
 
-            <Typography component="div" variant="body2" sx={{ fontFamily: "Gotu, sans-serif", my: 9, mb: 15, textAlign: 'center', fontWeight: 700, fontSize: 20}}>{subText}</Typography>
+            <Typography component="div" variant="h2" sx={{ fontFamily:"BDSans", my: 9, mb: 15, textAlign: 'center'}}>{subText}</Typography>
           </Box>
 
           <Box sx={{
@@ -259,10 +261,10 @@ const Retreats = () => {
           </Box>
 
           <Box sx={{mb: 4}}>
-            <Typography component="div" variant="body2" sx={{ fontFamily: "Gotu, sans-serif", mt: -3, textAlign: 'center', fontWeight: 700, fontSize: 20,}}>
+            <Typography component="div" variant="h2" sx={{ fontFamily:"BDSans", mt: -3, textAlign: 'center'}}>
               {sponsor.header}
             </Typography>
-            <Typography component="div" variant="body2" sx={{  p: 3, pt: 1}}>
+            <Typography component="div" variant="body2" sx={{  p: 3, pt: 1,fontFamily:"KollektifBold"}}>
               {sponsor.description} <a href= {`mailto: ${sponsor.email}`} style={{color: 'inherit'}}> {sponsor.email} </a>
             </Typography>
             <Box sx={{textAlign: 'center'}}>

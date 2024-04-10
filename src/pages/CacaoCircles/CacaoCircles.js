@@ -37,28 +37,9 @@ const CacaoCircles = () => {
             <Grid item xs={12} sm={6} md={9} sx={{}}>
               <Box sx={{height: '100%', display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'column'}}>
                 <Box sx={{textAlign: 'center'}}>
-                  {healer.description.map((el) => <Typography key={el} component="div" variant="caption" gutterBottom sx={{ mb: 2, px: 1}}>
+                  {healer.description.map((el) => <Typography key={el} component="div" variant="caption" gutterBottom sx={{ mb: 2, px: 1, fontFamily:"KollektifBold"}}>
                     {el}
                   </Typography>)}
-                  {/* <Typography component="div" variant="caption" gutterBottom sx={{ mb: 2, px: 1}}>
-                  When we speak of cacao, we often reiterate her heart-opening benefits. But what does it really mean? How can this plant from the Amazon transform us on an emotional or spiritual level?
-                  </Typography>
-                  <Typography component="div" variant="caption" gutterBottom sx={{ mb: 2, px: 1}}>
-                    When hearts need healing, they look for comfort. Soft blankets, comty clothes, a warm cup, or somebody to curl up with. What it one cup of cacao could provide all this... and more?
-                    </Typography>
-
-                  <Typography component="div" variant="caption" gutterBottom sx={{ mb: 2, px: 1}}>
-                    The truth is cacao invites us to love ourselves on a level deeper and more intimate than most of us have ever known. That's why it's so powerful. The quality of the time and space we're creating around cacao allows us to move through our emotions with tenderness.
-                    <br/>
-                    The spirit of Cacao is referred to as Mother or Mama, and holds deep association with Mother Earth and Pachamama, all of whom are grounding, nurturing energies. To speak this way about her is to soften our edges in her presence. In the all-accepting, compassionate embrace of Mother cacao, we allow ourselves to truly be seen.
-                    </Typography>
-
-                  <Typography component="div" variant="caption" gutterBottom sx={{ mb: 2, px: 1}}>What this does is transformation.</Typography>
-                  
-                  <Typography component="div" variant="caption" gutterBottom sx={{ mb: 2, px: 1}}>
-                    It makes space for the parts of us we've previously hidden. called too much or simply suppressed. It brings to the surface what we're ready to release and creates a beautiful, safe container for us to alchemize our heartache. By offering our grief, guilt, and shame to Mother Earth, we're allowing it to serve a purpose. We're bringing in acceptance and forgiveness which is what truly heals hearts and allows us to move forward. <br/>
-                    Cacao is a ceremonial plant medicine. When treated as such, she gently guides us to where we need to look, feel, and heal. How deep she takes us really depends on us.
-                  </Typography> */}
                 </Box>
               </Box>
             </Grid>
@@ -78,7 +59,7 @@ const CacaoCircles = () => {
         </Box>
         <Box>
 
-        <Typography component="div" variant="body2" gutterBottom sx={{mb: 3,}}>
+        <Typography component="div" variant="body2" gutterBottom sx={{mb: 3,fontFamily:"KollektifBold"}}>
           {healer.description.map((el, i) => <React.Fragment key={`Desc${i}`}>
             {el}
             <br/> <br/> 
@@ -105,7 +86,7 @@ const CacaoCircles = () => {
           <Grid item xs={7}  sx={{}}>
             <Box sx={{height: '100%', display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'column'}}>
               <Box sx={{textAlign: 'start', flexGrow: 1, justifyContent: 'center', alignItems: 'center', display: 'flex'}}>
-                <Typography component="div" variant="caption" gutterBottom sx={{ mb: 2, px: 1}}>
+                <Typography component="div" variant="caption" gutterBottom sx={{ mb: 2, px: 1,fontFamily:"Kollektif"}}>
                   {circle.description}
                 </Typography>
               </Box>
@@ -150,7 +131,7 @@ const CacaoCircles = () => {
           <Grid item xs={7}  sx={{}}>
             <Box sx={{height: '100%', display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'column'}}>
               <Box sx={{textAlign: 'start', flexGrow: 1, justifyContent: 'center', alignItems: 'center', display: 'flex'}}>
-                <Typography component="div" variant="caption" gutterBottom sx={{ mb: 2, px: 1}}>
+                <Typography component="div" variant="caption" gutterBottom sx={{ mb: 2, px: 1,fontFamily:"KollektifBold"}}>
                   {brew.description}
                 </Typography>
               </Box>
@@ -164,7 +145,7 @@ const CacaoCircles = () => {
     <Box sx={{height: '50vh'}}>
       <Box sx={{position: 'relative', background: '#1c310a', color: 'white'}}>
         <Box sx={{textAlign: 'center', height: 100, display:'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <Typography component="div" variant="" sx={{fontWeight: 700}}>{subHeader}</Typography>
+          <Typography component="div" variant="" sx={{fontWeight: 700,fontFamily:"KollektifBold"}}>{subHeader}</Typography>
         </Box>
         <Box sx={{ position: 'absolute', bottom: -17, left: '50%', transform: 'translateX(-50%)', zIndex: 9999,}}>
             <FoxyButton

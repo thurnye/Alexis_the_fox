@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "BDSans";
+  src: local("BeautifullyDelicious.ttf"),
+  url("./assets/fonts/BeautifullyDelicious.ttf") format("trueType");
+}
+@font-face {
+  font-family: "KollektifBold";
+  src: local("Kollektif-bold.ttf"),
+  url("./assets/fonts/kollektif/Kollektif-Bold.ttf") format("trueType");
+}
+@font-face {
+  font-family: "Kollektif";
+  src: local("Kollektif.ttf"),
+  url("./assets/fonts/kollektif/Kollektif.ttf") format("trueType");
+}

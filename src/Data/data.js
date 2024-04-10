@@ -72,7 +72,7 @@ export const useDataCustomHook = () => {
             },
         },
         meetAlexis: {
-            header: 'Meet Alexis',
+            header: 'meet Alexis',
             foxyImg: meetFoxy,
             about: [
                 `My name is Alexis Ramirez Jackson and I'm a fox of all trades. I'm a Latina, born and raised from New York City. I'm a feminine embodiment movement and cacao facilitator that specializes in trauma, content creator with over 5 million followers, mentor, mother, speaker, writer, creator, dancer, mental health advocate, and fashion designer. Like I said a fox of all trades lol.` ,
@@ -108,7 +108,7 @@ export const useDataCustomHook = () => {
             exploreService: 'EXPLORE INDIVIDUAL OR GROUP SESSIONS WITH ALEXIS FROM CACAO CIRCLES TO SENSUAL MOVEMENT CLASSES. EACH SESSION IS DESIGNED WITH YOUR HIGHEST INTENIONS AT THE CENTER.'
         },
         sensualDance:{
-            header: "Awaken the Goddess",
+            header: "Awaken the goddess",
             foxyImg: SensualDanceWorkshop,
             description: `The Feminine embodiment movement workshops also known as "Awaken the Goddess" are through sensual dance. We focus on may types of music but especially Bachata. It's an amazing way to reconnect to ourselves and our feminine nature, creating in a natural and playful way to balance between heart, body mind and soul. Sensual dance, filled with devotuional states and uplifting emotiuons, becomes an extraordinary tool for rediscovering our femininity in a sublime way. Consicious, sensual movement has a deeply harmonizing effect on many levels:`,
             benefits: [
@@ -137,7 +137,7 @@ export const useDataCustomHook = () => {
         },
         cacaoCircle: {
             healer: {
-                header: 'Cacoa Healer',
+                header: 'Cacoa healer',
                 img: cacoaHealer,
                 description: [
                     ` When we speak of cacao, we often reiterate her heart-opening benefits. But what does it really mean? How can this plant from the Amazon transform us on an emotional or spiritual level?`,
@@ -166,21 +166,21 @@ export const useDataCustomHook = () => {
         retreats: {
             jumbotron: {
                 icon: foxie,
-                header: 'Foxes Unplug',
+                header: 'foxes unplug',
                 videoSrc: videoFoxy,
                 subHeader: 'UNPLUG. RESTORE, OVERCOME, LOVE & LIVE TU VIDA',
                 description: `Wanted to travel but too afraid to do it alone? Or make plans with your friends but it neve goes through?, well, nme too! And therefore, Foxes Unplug was created. Foxes Unplug is NOT only a retreat/girls's trip. It's a community of women aka "Fxes" that will become sisters that'll laug, cry, heal, party, dance, have fun, conquer fears, experience and make memories together. With foxes unplung you'll form a lasting connection with yourself and your new sisters #foxegang`
             },
             retreat: {
-                header: 'Retreat or Girls Trips',
+                header: 'retreat or girls trips',
                 healing: {
                     img: healing,
-                    header: 'Healing Retreats',
+                    header: 'healing retreats',
                     description: `Our retreats are a combination of self-love, wellness, healing and adventure. It's a safe place for you to let your guard down, let go og trauma, prioritize healing and growth while focusing on your well-being physically, psychologically, and spiritually. The focus is inner transformation and meeting foxes just like you OF COURSE!.`
                 },
                 girlsTrip: {
                     img: grlTrip,
-                    header: 'Healing Retreats',
+                    header: 'girls trip',
                     description: `Our Girls trip is bringing all you Foxy Foxes together!. This trip is a getaway of adventure, peace, fun, trying and experiencing NEW things, creating new friendships, LIVING LIFE, and BRINGING THAT SEXY BACK!. It's a sage place where you can be unapologetically yourself! and have a good time with no worries. HAKUNA MATATA foxes!.`
                 },
                 couples: {
@@ -232,6 +232,7 @@ export const useDataCustomHook = () => {
         },
         podcastVlog: {
             vlog: {
+                header: 'vlog',
                 img: shopImage1,
                 text: 'WELCOME TO MY VLOG JOURNAL. HERE I WILL SHARE PARTS OF MY LIFE, FROM MY DAILY ROUTINES TO MY INNER THOUGHTS.',
                 link: {
@@ -240,6 +241,7 @@ export const useDataCustomHook = () => {
                 }
             },
             podcast: {
+                header: 'podcast',
                 soon: {
                     img: shopImage4
                 },
@@ -251,7 +253,7 @@ export const useDataCustomHook = () => {
         shop:{
             img: shopImage5,
             header: 'Coming Soon...',
-            subHeader: 'Summer 2024'
+            subHeader: 'Spring 2024'
         },
         contact: {
             img: snowyFox,

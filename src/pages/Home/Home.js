@@ -39,12 +39,12 @@ const Home = () => {
           <Box sx={{ display: 'flex', flexDirection: 'column', maxWidth: 'md' }}>
             <CardContent sx={{ flex: '1 0 auto', textAlign: 'center' }}>
               <Typography component="div" variant="h3" sx={{color: '#8e4e32', fontFamily: "Gotu, sans-serif"}}> {header}</Typography>
-              <Typography variant="body1"  component="div" sx={{ px: 2, fontSize: {xs: 12, md: 15}, display: {xs: 'none', sm: 'block'}, mt: 3, color:'#94998a'}}>
+              <Typography variant="body1"  component="div" sx={{ px: 2, fontFamily: "Gotu, sans-serif", fontSize: {xs: 12, md: 15}, display: {xs: 'none', sm: 'block'}, mt: 3, color:'#94998a'}}>
                 {subHeader}
               </Typography>
             </CardContent>
             <Box sx={{textAlign: 'center', display: {xs:'none', md: 'block'}}}>
-            <Typography variant="body1"  component="div" sx={{fontSize: 15, fontWeight: 'bold', p: 3}}>
+            <Typography variant="body1"  component="div" sx={{fontSize: 15, fontFamily: "Kollektif", fontWeight: 'bold', p: 3}}>
               {description}
             </Typography>
             <FoxyButton
@@ -68,10 +68,10 @@ const Home = () => {
         
         {/* Small devices */}
         <Box sx={{textAlign: 'center', display: {xs:'block', md: 'none'}}}>
-          <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15}, display: {xs: 'block', sm: 'none'}, color:'#94998a'}}>
+          <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontFamily: "Gotu, sans-serif", fontSize: {xs: 12, md: 15}, display: {xs: 'block', sm: 'none'}, color:'#94998a'}}>
             {subHeader}
           </Typography>
-          <Typography variant="body1"  component="div" sx={{fontSize: 15, fontWeight: 'bold', p: 3}}>
+          <Typography variant="body1"  component="div" sx={{fontSize: 15, fontFamily: "Kollektif", fontWeight: 'bold', p: 3}}>
             {description}
           </Typography>
           <FoxyButton

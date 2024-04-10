@@ -7,6 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import FoxyButton from '../../components/FoxyButton/FoxyButton';
 import {useDataCustomHook} from '../../Data/data';
+import HeaderTitle from '../../components/HeaderTitle/HeaderTitle';
 
 const SensualDance = () => {
   const data = useDataCustomHook();
@@ -23,7 +24,11 @@ const SensualDance = () => {
           pt: {xs: 3, md: 5},
           pb: 22
           }}>
-          <Typography component="div" variant="h3" sx={{ fontFamily: "Gotu, sans-serif", textAlign: 'center', display: {xs:'none', lg: 'block'}}}> {header}</Typography>
+            <Box sx={{ fontFamily: "BDSans", textAlign: 'center', display: {xs:'none', lg: 'block'}}}>
+
+            <HeaderTitle title={header}/>
+            </Box>
+        
           <Box sx={{flexGrow: 1, px: {md: 2}, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <Box sx={{ display: 'flex', flexDirection: 'column', pt: 3, border: 'none', borderShadow: 'none' }}>
       
@@ -31,14 +36,17 @@ const SensualDance = () => {
                 
                 <Box sx={{ display: 'flex', flexDirection: 'column', maxWidth: 'md' }}>
                   <CardContent sx={{ flex: '1 0 auto'}}>
-                    <Typography component="div" variant="h3" sx={{ fontFamily: "Gotu, sans-serif", textAlign: 'center', display: {xs:'block', lg: 'none'}}}> {header}</Typography>
+                    <Box sx={{ fontFamily: "BDSans", textAlign: 'center', display: {xs:'block', lg: 'none'}}}>
+                      <HeaderTitle title={header}/>
+                    </Box>
+                 
                   </CardContent>
 
                   <Box sx={{textAlign: 'start', display: {xs:'none', md: 'block'}}}>
-                    <Typography component="div" variant="caption" gutterBottom sx={{ mb: 2, px: 1}}>
+                    <Typography component="div" variant="caption" gutterBottom sx={{ mb: 2, px: 1,fontFamily: "Kollektif"}}>
                       {description}
                     </Typography>
-                    {benefits.map((el) => <Typography key={el} component="div" variant="caption" gutterBottom sx={{px: 1}}>*{el}</Typography>)}
+                    {benefits.map((el) => <Typography key={el} component="div" variant="caption" gutterBottom sx={{px: 1,fontFamily: "Kollektif"}}>*{el}</Typography>)}
                   </Box>
                 </Box>
                 <Box sx={{px: 1}}>
@@ -57,10 +65,10 @@ const SensualDance = () => {
       
               {/* Small devices */}
               <Box sx={{textAlign: 'start', display: {xs:'block', md: 'none'}}}>
-                <Typography variant="body1"  sx={{my: 3, fontSize: {xs: 12, md: 16}, display: {xs: 'block', md: 'none'}}}>
+                <Typography variant="body1"  sx={{my: 3, fontSize: {xs: 12, md: 16}, display: {xs: 'block', md: 'none',fontFamily: "Kollektif"}}}>
                   {description}
                 </Typography>
-                {benefits.map((el) => <Typography key={el} component="div" variant="caption" gutterBottom sx={{px: 1}}>*{el}</Typography>)}
+                {benefits.map((el) => <Typography key={el} component="div" variant="caption" gutterBottom sx={{px: 1,fontFamily: "Kollektif"}}>*{el}</Typography>)}
               </Box>
             </Box>
           </Box>
@@ -72,13 +80,13 @@ const SensualDance = () => {
           color: 'white',
           p: 3,
           height: {xs:'50%', md: '40%'},
-          display: 'flex', flexDirection: 'column',
+          display: 'flex', flexDirection: 'column',fontFamily: "Kollektif"
         }}>
-          <Typography variant="body2" sx={{ textAlign: 'center', mb: 3, fontSize: '1rem'}}>
+          <Typography variant="body2" sx={{ textAlign: 'center', mb: 3, fontSize: '1rem',fontFamily: "Kollektif"}}>
            {workshopDescription}
           </Typography>
           <Box sx={{flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start'}}>
-            {workshopBenefits.map((el) => <Typography key={el} component="div" variant="caption" gutterBottom sx={{px: 1, fontSize: '0.8rem'}}>*{el}</Typography>)}
+            {workshopBenefits.map((el) => <Typography key={el} component="div" variant="caption" gutterBottom sx={{px: 1, fontSize: '0.8rem',fontFamily: "Kollektif"}}>*{el}</Typography>)}
           </Box>
         </Box>
           </Box>
@@ -89,10 +97,10 @@ const SensualDance = () => {
         '@media (min-width: 401px) and (max-width: 500px)': { mt: '50vh'},
         '@media (min-width: 501px) and (max-width: 599px)': {mt: '65%' },
         '@media (min-width: 600px) and (max-width: 725px)': { mt: '60%'},
-        '@media (min-width: 726px) and (max-width: 900px)': {mt: '40vh' },
-        '@media (min-width: 901px)': {mt: '30vh' }
+        '@media (min-width: 726px) and (max-width: 1000px)': {mt: '40vh' },
+        '@media (min-width: 1001px)': {mt: '32vh' }
     }}/>
-      <Typography variant="body2" sx={{ textAlign: 'start', mb: 3, fontSize: '1rem'}}>
+      <Typography variant="body2" sx={{ textAlign: 'start', mb: 3, fontSize: '1rem',fontFamily: "Kollektif"}}>
       {subText}
 
       </Typography>
@@ -111,7 +119,7 @@ const SensualDance = () => {
       <Box sx={{height: '50vh'}}>
       <Box sx={{position: 'relative', background: '#392D13', color: 'white'}}>
         <Box sx={{textAlign: 'center', height: 100, display:'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <Typography component="div" variant="" sx={{fontWeight: 700}}>{subHeader}</Typography>
+          <Typography component="div" variant="" sx={{fontWeight: 700,fontFamily: "KollektifBold"}}>{subHeader}</Typography>
         </Box>
       </Box>
         <Box sx={{ mt: 20, textAlign: 'center'}}>

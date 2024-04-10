@@ -8,7 +8,7 @@ export default function HeaderTitle({title, variant='h2'}) {
       <Typography component="div" variant={variant} sx={{
         mt: 3,
         mb: 1,
-        fontFamily: "Indie Flower, cursive",
+        fontFamily: "BDSans !important",
         fontWeight: 400,
         fontStyle: 'normal',
         }}>

@@ -23,7 +23,7 @@ const SensualDance = () => {
           pt: {xs: 3, md: 5},
           pb: 22
           }}>
-          <Typography component="div" variant="h3" sx={{ fontFamily: "Gotu, sans-serif", textAlign: 'center', display: {xs:'none', lg: 'block'}}}> {header}</Typography>
+          <Typography component="div" variant="h3" sx={{ fontFamily: "BDSans", textAlign: 'center', display: {xs:'none', lg: 'block'}}}> {header}</Typography>
           <Box sx={{flexGrow: 1, px: {md: 2}, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <Box sx={{ display: 'flex', flexDirection: 'column', pt: 3, border: 'none', borderShadow: 'none' }}>
       
@@ -31,7 +31,7 @@ const SensualDance = () => {
                 
                 <Box sx={{ display: 'flex', flexDirection: 'column', maxWidth: 'md' }}>
                   <CardContent sx={{ flex: '1 0 auto'}}>
-                    <Typography component="div" variant="h3" sx={{ fontFamily: "Gotu, sans-serif", textAlign: 'center', display: {xs:'block', lg: 'none'}}}> {header}</Typography>
+                    <Typography component="div" variant="h3" sx={{ fontFamily: "BDSans", textAlign: 'center', display: {xs:'block', lg: 'none'}}}> {header}</Typography>
                   </CardContent>
 
                   <Box sx={{textAlign: 'start', display: {xs:'none', md: 'block'}}}>

@@ -34,7 +34,7 @@ const Podcast = () => {
           </Grid>
           <Grid item xs={12} md={6} >
             <Box sx={{textAlign:'center', my:{xs:3, lg:'initial'}}}>
-              <Typography>
+              <Typography sx={{fontFamily:"Kollektif"}}>
                 {vlog.text}
               </Typography>
               <Link href={vlog.link.path}>

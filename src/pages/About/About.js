@@ -31,7 +31,7 @@ const About = () => {
               <Box sx={{height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
                 <HeaderTitle title={header}/>
                 <Box sx={{textAlign: 'center'}}>
-                  {about.map((el, i) => <Typography key={`about_${i}`} component="div" variant="body2" gutterBottom sx={{mb: 3, px: 3}}>
+                  {about.map((el, i) => <Typography key={`about_${i}`} component="div" variant="body2" gutterBottom sx={{mb: 3, px: 3,fontFamily: "Kollektif"}}>
                     {el}
                     </Typography>
                   )}
@@ -61,7 +61,7 @@ const About = () => {
         <Box>
         <HeaderTitle title={header}/>
 
-        <Typography component="div" variant="body2" gutterBottom sx={{mb: 3,}}>
+        <Typography component="div" variant="body2" gutterBottom sx={{mb: 3,fontFamily: "Kollektif"}}>
           {about.map((el) => <React.Fragment key={el}>
             {el}
             <br/> <br/>   
@@ -96,7 +96,7 @@ const About = () => {
                           width: {xs: 'initial', md: 170},
                           textAlign: 'center',
                           fontSize: {xs: '1rem', sm:'1.5rem'},
-                          fontFamily:'monospace', fontWeight: 700,
+                          fontFamily: "Kollektif", fontWeight: 700,
                           color:'#cfcfcf' 
                         }}
                           >

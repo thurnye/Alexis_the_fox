@@ -49,7 +49,7 @@ const Contact = () => {
           {forms.map((el) => 
           el.formType === 'input' ?
           <Box sx={{display: 'flex', justifyContent: 'flex-start', alignItems: 'end', mt: 4}} key={el.name}>
-            <Typography variant="body2" sx={{mr: 1}}>{el.label}</Typography>
+            <Typography variant="body2" sx={{mr: 1,fontFamily:"KollektifBold"}}>{el.label}</Typography>
               <TextField 
               id="standard-basic" 
               variant="standard"
@@ -57,6 +57,7 @@ const Contact = () => {
               rows={el.rows}
               sx={{
                 color: 'white', 
+                fontFamily:"KollektifBold",
                 flexGrow: 1, 
                 '& .MuiInput-underline:before': {
                   borderBottomColor: 'white !important', // Change border bottom color to white
@@ -77,6 +78,7 @@ const Contact = () => {
           :
           <Box sx={{display: 'flex', flexDirection: 'column', mt: 4 }}>
             <Typography variant="body2" sx={{mt: 1, 
+              fontFamily:"KollektifBold",
               textAlign: 'center', }}>{el.label}</Typography>
              <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
               <Select
@@ -87,6 +89,7 @@ const Contact = () => {
                 label="Age"
                 sx={{
                   color: "white",
+                  fontFamily:"KollektifBold",
                   '.MuiSvgIcon-root ': {
                     fill: "white !important",
                   },
@@ -105,7 +108,7 @@ const Contact = () => {
                 <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
-                {el.options.map((opt) => <MenuItem value={opt} key={opt}>{opt}</MenuItem>)}
+                {el.options.map((opt) => <MenuItem value={opt} sx={{fontFamily:"Kollektif"}} key={opt}>{opt}</MenuItem>)}
               </Select>
             </FormControl>
           </Box>

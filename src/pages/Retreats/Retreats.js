@@ -51,7 +51,7 @@ const Retreats = () => {
             }}>
           
               <Typography variant="h2" sx={{my: 2, mb:0, fontFamily:"BDSans"}}>{jumbotron.header}</Typography>
-              <Typography variant="body2" sx={{color: '#955b35', fontWeight: 700}}>{jumbotron.subHeader}</Typography>
+              <Typography variant="body2" sx={{color: '#955b35', fontWeight: 700,fontFamily:"KollektifBold"}}>{jumbotron.subHeader}</Typography>
             </Box>
           </Box>
           <Box sx={{width: {xs: '70%', lg:'50%'}, position: 'absolute', left: '50%', transform: 'translateX(-50%)', background: 'white', p: 1, mt: {xs: -5, sm: -9}}}>
@@ -69,7 +69,7 @@ const Retreats = () => {
           </Box>
         </Box>
         <Box sx={{ mt: {xs:'27vh', md: '40vh'} }}>
-          <Typography variant="body2" sx={{textAlign: 'center', width: {xs: '85%', md: '70%'}, m: 'auto'}}>
+          <Typography variant="body2" sx={{textAlign: 'center', width: {xs: '85%', md: '70%'}, m: 'auto',fontFamily:"Kollektif"}}>
            {jumbotron.description}
           </Typography>
 
@@ -100,7 +100,7 @@ const Retreats = () => {
               <Box sx={{ display: 'flex', flexDirection: 'column', color:'white' }}>
                 <CardContent sx={{ flex: '1 0 auto', textAlign: 'center' }}>
                   <Typography component="div" variant="h1" sx={{ fontFamily:"BDSans", display: {xs: 'none', sm: 'block'}}}> {healing.header}</Typography>
-                  <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15}, color:'white'}}>
+                  <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15}, color:'white',fontFamily:"KollektifBold"}}>
                     {healing.description}
                   </Typography>
                 </CardContent>
@@ -125,7 +125,7 @@ const Retreats = () => {
               <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                 <CardContent sx={{ flex: '1 0 auto', textAlign: 'center' }}>
                   <Typography component="div" variant="h1" sx={{ fontFamily:"BDSans", display: {xs: 'none', sm: 'block'}}}> {girlsTrip.header}</Typography>
-                  <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15}, color:'white'}}>
+                  <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15}, color:'white',fontFamily:"KollektifBold"}}>
                   {girlsTrip.description}
                   </Typography>
                 </CardContent>
@@ -152,7 +152,7 @@ const Retreats = () => {
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column'}}>
                   <CardContent sx={{ flex: '1 0 auto', textAlign: 'start' }}>
-                    <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15}}}>
+                    <Typography variant="body1"  component="div" sx={{mt: 3, px: 2, fontSize: {xs: 12, md: 15},fontFamily:"Kollektif"}}>
                       {couples.description}
                     </Typography>
                   </CardContent>
@@ -264,7 +264,7 @@ const Retreats = () => {
             <Typography component="div" variant="h2" sx={{ fontFamily:"BDSans", mt: -3, textAlign: 'center'}}>
               {sponsor.header}
             </Typography>
-            <Typography component="div" variant="body2" sx={{  p: 3, pt: 1}}>
+            <Typography component="div" variant="body2" sx={{  p: 3, pt: 1,fontFamily:"KollektifBold"}}>
               {sponsor.description} <a href= {`mailto: ${sponsor.email}`} style={{color: 'inherit'}}> {sponsor.email} </a>
             </Typography>
             <Box sx={{textAlign: 'center'}}>
